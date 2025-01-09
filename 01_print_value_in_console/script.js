@@ -65,7 +65,7 @@ console.log("Modulo :", mod_sum % 1);
 // (vii) Pre-increment  ++(variable)
 // First increment the value and then assign the value to the variable ONLY ONCE ASSIGN THE VALUE TO THE VARIABLE
 let preincre_num = 4;
-let preincre_sum = ++preincre_num;  // Here value 5 is assigned to the preincre_sum variable and also self assigned the value 5 to the preincre_num variable
+let preincre_sum = ++preincre_num; // Here value 5 is assigned to the preincre_sum variable and also self assigned the value 5 to the preincre_num variable
 console.log("Pre-increment :", preincre_sum);
 console.log("Pre-increment :", preincre_num);
 // ========================================================
@@ -73,7 +73,7 @@ console.log("Pre-increment :", preincre_num);
 // (viii) Pre-decrement  --(variable)
 // First decrement the value and then assign the value to the variable ONLY ONCE ASSIGN THE VALUE TO THE VARIABLE
 let predecre_num = 8;
-let predecre_sum = --predecre_num;  // Here value 7 is assigned to the preincre_sum variable and also self assigned the value 7 to the predecre_num variable
+let predecre_sum = --predecre_num; // Here value 7 is assigned to the preincre_sum variable and also self assigned the value 7 to the predecre_num variable
 console.log("Pre-decrement :", predecre_sum);
 console.log("Pre-decrement :", predecre_num);
 // ========================================================
@@ -81,7 +81,7 @@ console.log("Pre-decrement :", predecre_num);
 // (ix) Post-increment  (variable)++
 // First assign the value to the variable and then increment the value ONLY ONCE ASSIGN THE VALUE TO THE VARIABLE
 let postincre_num = 3;
-let postincre_sum = postincre_num++;    // Here value 3 is assigned to the postincre_sum variable and then increment the value to 4 and then self assigned the value 4 to the postincre_num variable
+let postincre_sum = postincre_num++; // Here value 3 is assigned to the postincre_sum variable and then increment the value to 4 and then self assigned the value 4 to the postincre_num variable
 console.log("Post-increment :", postincre_sum);
 console.log("Post-increment :", postincre_num);
 // ========================================================
@@ -89,7 +89,50 @@ console.log("Post-increment :", postincre_num);
 // (x) Post-decrement (variable)--
 // First assign the value to the variable and then decrement the value ONLY ONCE ASSIGN THE VALUE TO THE VARIABLE
 let postdecre_num = 7;
-let postdecre_sum = postdecre_num--;    // Here value 7 is assigned to the postdecre_sum variable and then decrement the value to 6 and then self assigned the value 6 to the postdecre_num variable
+let postdecre_sum = postdecre_num--; // Here value 7 is assigned to the postdecre_sum variable and then decrement the value to 6 and then self assigned the value 6 to the postdecre_num variable
 console.log("Post-decrement :", postdecre_sum);
 console.log("Post-decrement :", postdecre_num);
+// --------------------------------------------------------
+
+// Shorthand assignment operators -  =  +=  -=  *=  /=  %=  **=
+// (i) Assignment operator =
+let assign_num = 8;
+console.log("Assignment :", assign_num);
+// ========================================================
+
+// (ii) Shorthand addition +=
+let short_add_num = 4;
+short_add_num += 3; // Shorthand of short_add_num = short_add_num + 3;
+console.log("Shorthand addition :", short_add_num);
+// ========================================================
+
+// (iii) Shorthand subtraction -=
+let short_sub_num = 5;
+short_sub_num -= 2; // Shorthand of short_sub_num = short_sub_num - 2;
+console.log("Shorthand subtraction :", short_sub_num);
+// ========================================================
+
+// (iv) Shorthand multiplication *=
+let short_multi_num = 8;
+short_multi_num *= 3; // Shorthand of short_multi_num = short_multi_num * 3;
+console.log("Shorthand multiplication :", short_multi_num);
+// ========================================================
+
+// (v) Shorthand division /=
+let short_div_num = 6;
+short_div_num /= 4; // Shorthand of short_div_num = short_div_num / 4;
+console.log("Shorthand division :", short_div_num);
+// ========================================================
+
+// (vi) Shorthand modulo %=
+let short_mod_num = 3;
+short_mod_num %= 6; // Shorthand of short_mod_num = short_mod_num % 6;
+console.log("Shorthand modulo :", short_mod_num);
+// ========================================================
+
+// (vii) Shorthand exponent **=
+let short_expo_num = 7;
+short_expo_num **= 3; // Shorthand of short_expo_num = short_expo_num ** 3;
+console.log("Shorthand exponent :", short_expo_num);
+// ========================================================
 // --------------------------------------------------------
