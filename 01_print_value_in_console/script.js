@@ -136,3 +136,40 @@ short_expo_num **= 3; // Shorthand of short_expo_num = short_expo_num ** 3;
 console.log("Shorthand exponent :", short_expo_num);
 // ========================================================
 // --------------------------------------------------------
+
+// Special cases
+// (i) Infinity
+let spec_infini_num = 5 / 0;    // Here answer is infinity (∞) symbol stored inside the spec_infini_num variable
+console.log("Infinity value :", spec_infini_num);
+// ========================================================
+
+// (ii) -Infinity
+let spec_min_infini_num = -3 / 0; // Here answer is minus infinity (-∞) symbol stored inide the spec_infini_num variable
+console.log("-Infinity value :", spec_min_infini_num);
+// ========================================================
+
+// (iii) NaN - Not a Number
+let spec_no_num = 0 / 0;   // Here answer is NaN (Not a Number) stored in a spec_no_num variable 
+console.log("Not a Number :", spec_no_num);
+
+console.log("Not a Number :", Math.sqrt(-1));   // Here also same answer NaN (Not a Number)
+// ========================================================
+
+// (iv) Undefined
+let spec_undefi;    // Here spec_undefi variable implicitly assigned undefined
+console.log("Undefined :", spec_undefi);
+// ========================================================
+
+// (v) null
+let spec_null = null;   // Here we assigned explicitly null value to the spec_null variable
+console.log("Null :",spec_null);
+// ========================================================
+
+// (vi) typeof - This is used to find the data type of the variable
+let spec_type_var1 = 3;
+console.log("Number type :", typeof spec_type_var1);
+
+let spec_type_var2 = "Hai";
+console.log("String type :", typeof spec_type_var2);
+// ========================================================
+// --------------------------------------------------------
