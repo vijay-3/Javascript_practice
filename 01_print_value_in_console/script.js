@@ -139,37 +139,99 @@ console.log("Shorthand exponent :", short_expo_num);
 
 // Special cases
 // (i) Infinity
-let spec_infini_num = 5 / 0;    // Here answer is infinity (∞) symbol stored inside the spec_infini_num variable
-console.log("Infinity value :", spec_infini_num);
+let spec_infini_num = 5 / 0; // Here answer is infinity (∞) symbol stored inside the spec_infini_num variable
+console.log("Infinity value : " + spec_infini_num);
 // ========================================================
 
 // (ii) -Infinity
 let spec_min_infini_num = -3 / 0; // Here answer is minus infinity (-∞) symbol stored inide the spec_infini_num variable
-console.log("-Infinity value :", spec_min_infini_num);
+console.log("-Infinity value : " + spec_min_infini_num);
 // ========================================================
 
 // (iii) NaN - Not a Number
-let spec_no_num = 0 / 0;   // Here answer is NaN (Not a Number) stored in a spec_no_num variable 
-console.log("Not a Number :", spec_no_num);
+let spec_no_num = 0 / 0; // Here answer is NaN (Not a Number) stored in a spec_no_num variable
+console.log("Not a Number : " + spec_no_num);
 
-console.log("Not a Number :", Math.sqrt(-1));   // Here also same answer NaN (Not a Number)
+console.log("Not a Number : " + Math.sqrt(-1)); // Here also same answer NaN (Not a Number)
 // ========================================================
 
 // (iv) Undefined
-let spec_undefi;    // Here spec_undefi variable implicitly assigned undefined
-console.log("Undefined :", spec_undefi);
+let spec_undefi; // Here spec_undefi variable implicitly assigned undefined
+console.log("Undefined : " + spec_undefi);
 // ========================================================
 
 // (v) null
-let spec_null = null;   // Here we assigned explicitly null value to the spec_null variable
-console.log("Null :",spec_null);
+let spec_null = null; // Here we assigned explicitly null value to the spec_null variable
+console.log("Null : " + spec_null);
 // ========================================================
 
 // (vi) typeof - This is used to find the data type of the variable
 let spec_type_var1 = 3;
-console.log("Number type :", typeof spec_type_var1);
+console.log("Number type : " + typeof spec_type_var1);
 
 let spec_type_var2 = "Hai";
-console.log("String type :", typeof spec_type_var2);
+console.log("String type : " + typeof spec_type_var2);
 // ========================================================
+// --------------------------------------------------------
+
+// Comparison operators -  ==  ===  !=  !==  >  <  >=  <=  ?:
+// (i) Equality operator ==     This is used for compare the two values only not their data types for same
+let equali_num = 6;
+console.log("Equality : " + (equali_num == 6));
+console.log("Equality : " + (equali_num == "6"));
+// ========================================================
+
+// (ii) Strict equality operator ===    This is used for compare the two values and their data types for same
+let strict_equali_num = 4;
+console.log("Strict equality : " + (strict_equali_num === 4));
+console.log("Strict equality : " + (strict_equali_num === "4"));
+// ========================================================
+
+// (iii) Not equality operator !=   This is used for compare the two values for not same but don't compare their data types
+let not_equali_num = 6;
+console.log("Not equality : " + (not_equali_num != 9));
+console.log("Not equality : " + (not_equali_num != "9"));
+// ========================================================
+
+// (iv) Strict not equality operator !==    This is used for compare the two values amd their data types for not same
+let strict_not_equali_num = 4;
+console.log("Strict not equality : " + (strict_not_equali_num !== 4));
+console.log("Strict not equality : " + (strict_not_equali_num !== "4"));
+// ========================================================
+
+// (v) Greater than operator >  This is used for compare the two values by first element is greater than the second element
+let great_num1 = 5,
+  great_num2 = 2;
+console.log("Greater than : " + (great_num1 > great_num2));
+// ========================================================
+
+// (vi) Less than operator <    This is used for compare the two values by first element is less than the second element
+let less_num1 = 8, less_num2 = 13;
+console.log("Less than : " + (less_num1 < less_num2));
+// ========================================================
+
+// (vii) Greater than or Equal to operator >=   This is used for compare the two values by first element is greater than or equal to second element
+let great_or_equal_num1 = 5, great_or_equal_num2 = 5;
+console.log("Greater than or Equal to : " + (great_or_equal_num1 >= great_or_equal_num2));
+// ========================================================
+
+// (viii) Less than or Equal to operator <=     This is used for compare the two values by first element is less than or equal to second element
+let less_or_equal_num1 = 3, less_or_equal_num2 = 3;
+console.log("Less than or Equal to : " + (less_or_equal_num1 <= less_or_equal_num2));
+// --------------------------------------------------------
+
+// Logical operator -  &&  ||  !        These operators work like take the first element's value and take the second element's value and then process the two values
+// AND operator &&  This is used for compare the two conditions for both conditions true
+let and_op_num = 8;
+console.log("AND : " + ((and_op_num < 12) && (and_op_num > 5)));
+// ========================================================
+
+// OR operator ||       This is used for compare the two conditions for any one condition true or both conditions true
+let or_op_num = 5;
+console.log("OR : " + ((or_op_num < 8) || (or_op_num > 17)));
+// ========================================================
+
+// NOT operator !       This is used for change the booolean value true to false or false to true
+let not_op_num = 0;
+console.log("NOT : " + (!not_op_num));
 // --------------------------------------------------------
