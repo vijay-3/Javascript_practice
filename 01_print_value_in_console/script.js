@@ -206,44 +206,53 @@ console.log("Greater than : " + (great_num1 > great_num2));
 // ========================================================
 
 // (vi) Less than operator <    This is used for compare the two values by first element is less than the second element
-let less_num1 = 8, less_num2 = 13;
+let less_num1 = 8,
+  less_num2 = 13;
 console.log("Less than : " + (less_num1 < less_num2));
 // ========================================================
 
 // (vii) Greater than or Equal to operator >=   This is used for compare the two values by first element is greater than or equal to second element
-let great_or_equal_num1 = 5, great_or_equal_num2 = 5;
-console.log("Greater than or Equal to : " + (great_or_equal_num1 >= great_or_equal_num2));
+let great_or_equal_num1 = 5,
+  great_or_equal_num2 = 5;
+console.log(
+  "Greater than or Equal to : " + (great_or_equal_num1 >= great_or_equal_num2)
+);
 // ========================================================
 
 // (viii) Less than or Equal to operator <=     This is used for compare the two values by first element is less than or equal to second element
-let less_or_equal_num1 = 3, less_or_equal_num2 = 3;
-console.log("Less than or Equal to : " + (less_or_equal_num1 <= less_or_equal_num2));
+let less_or_equal_num1 = 3,
+  less_or_equal_num2 = 3;
+console.log(
+  "Less than or Equal to : " + (less_or_equal_num1 <= less_or_equal_num2)
+);
 // --------------------------------------------------------
 
 // Logical operator -  &&  ||  !        These operators work like take the first element's value and take the second element's value and then process the two values
 // AND operator &&  This is used for compare the two conditions for both conditions true
 let logic_and_op_num = 8;
-console.log("Logical AND : " + ((logic_and_op_num < 12) && (logic_and_op_num > 5)));
+console.log("Logical AND : " + (logic_and_op_num < 12 && logic_and_op_num > 5));
 // ========================================================
 
 // OR operator ||       This is used for compare the two conditions for any one condition true or both conditions true
 let logic_or_op_num = 5;
-console.log("Logical OR : " + ((logic_or_op_num < 8) || (logic_or_op_num > 17)));
+console.log("Logical OR : " + (logic_or_op_num < 8 || logic_or_op_num > 17));
 // ========================================================
 
 // NOT operator !       This is used for change the boolean value true to false or false to true
 let logic_not_op_num = 0;
-console.log("Logical NOT : " + (!logic_not_op_num));
+console.log("Logical NOT : " + !logic_not_op_num);
 // --------------------------------------------------------
 
 // Bitwise operator -  &  |  ^  ~  <<  >>  >>>       These operators work like take the first element's bit value and second element's bit value and then compare the each bit value
 // (i) Bitwise AND operator &       This is used for compare the two value's bit for both true and then give the answer
-let bit_and_op_num1 = 5, bit_and_op_num2 = 6;
+let bit_and_op_num1 = 5,
+  bit_and_op_num2 = 6;
 console.log("Bitwise AND :", bit_and_op_num1 & bit_and_op_num2);
 // ========================================================
 
 // (ii) Bitwise OR operator |       This is used for compare the two value's bit for any one or both true and then give the answer
-let bit_or_op_num1 = 7, bit_or_op_num2 = 3;
+let bit_or_op_num1 = 7,
+  bit_or_op_num2 = 3;
 console.log("Bitwise OR :", bit_or_op_num1 | bit_or_op_num2);
 // ========================================================
 
@@ -253,7 +262,8 @@ console.log("Bitwise NOT :", ~bit_not_op_num);
 // ========================================================
 
 // (iv) Bitwise XOR operator ^     This is used for compare the two value's bit for only any one true and then give the answer
-let bit_xor_op_num1 = 4, bit_xor_op_num2 = 6;
+let bit_xor_op_num1 = 4,
+  bit_xor_op_num2 = 6;
 console.log("Bitwise XOR :", bit_xor_op_num1 ^ bit_xor_op_num2);
 // ========================================================
 
@@ -269,5 +279,14 @@ console.log("Bitwise Right Shift :", bit_right_shift_op_num >> 1);
 
 // (vii) Bitwise unsigned right shift operator >>>      This is work like a move the each bit to right and left side last bit added 0 here nothing consider that bit 0 or 1
 let bit_unsign_right_shift_op_num = 8;
-console.log("Bitwise Unsigned Right Shift :", bit_unsign_right_shift_op_num >>> 1);
+console.log(
+  "Bitwise Unsigned Right Shift :",
+  bit_unsign_right_shift_op_num >>> 1
+);
+// --------------------------------------------------------
+
+// Geting user input by using prompt        This prompt always return the string datatype
+let user_name = prompt("Enter the name ");
+console.log("Your name is " + user_name);
+console.log("Type is : " + typeof user_name);
 // --------------------------------------------------------
