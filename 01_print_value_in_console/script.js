@@ -222,16 +222,52 @@ console.log("Less than or Equal to : " + (less_or_equal_num1 <= less_or_equal_nu
 
 // Logical operator -  &&  ||  !        These operators work like take the first element's value and take the second element's value and then process the two values
 // AND operator &&  This is used for compare the two conditions for both conditions true
-let and_op_num = 8;
-console.log("AND : " + ((and_op_num < 12) && (and_op_num > 5)));
+let logic_and_op_num = 8;
+console.log("Logical AND : " + ((logic_and_op_num < 12) && (logic_and_op_num > 5)));
 // ========================================================
 
 // OR operator ||       This is used for compare the two conditions for any one condition true or both conditions true
-let or_op_num = 5;
-console.log("OR : " + ((or_op_num < 8) || (or_op_num > 17)));
+let logic_or_op_num = 5;
+console.log("Logical OR : " + ((logic_or_op_num < 8) || (logic_or_op_num > 17)));
 // ========================================================
 
-// NOT operator !       This is used for change the booolean value true to false or false to true
-let not_op_num = 0;
-console.log("NOT : " + (!not_op_num));
+// NOT operator !       This is used for change the boolean value true to false or false to true
+let logic_not_op_num = 0;
+console.log("Logical NOT : " + (!logic_not_op_num));
+// --------------------------------------------------------
+
+// Bitwise operator -  &  |  ^  ~  <<  >>  >>>       These operators work like take the first element's bit value and second element's bit value and then compare the each bit value
+// (i) Bitwise AND operator &       This is used for compare the two value's bit for both true and then give the answer
+let bit_and_op_num1 = 5, bit_and_op_num2 = 6;
+console.log("Bitwise AND :", bit_and_op_num1 & bit_and_op_num2);
+// ========================================================
+
+// (ii) Bitwise OR operator |       This is used for compare the two value's bit for any one or both true and then give the answer
+let bit_or_op_num1 = 7, bit_or_op_num2 = 3;
+console.log("Bitwise OR :", bit_or_op_num1 | bit_or_op_num2);
+// ========================================================
+
+// (iii) Bitwise NOT operator ~     This is used for change the value's bit to 0 to 1 and 1 to 0 and theh give the answer
+let bit_not_op_num = 9;
+console.log("Bitwise NOT :", ~bit_not_op_num);
+// ========================================================
+
+// (iv) Bitwise XOR operator ^     This is used for compare the two value's bit for only any one true and then give the answer
+let bit_xor_op_num1 = 4, bit_xor_op_num2 = 6;
+console.log("Bitwise XOR :", bit_xor_op_num1 ^ bit_xor_op_num2);
+// ========================================================
+
+// (v) Bitwise left shift operator <<   This is work like a move the each bit to left and right side last bit added 0
+let bit_left_shift_op_num = 7;
+console.log("Bitwise Left Shift :", bit_left_shift_op_num << 1);
+// ========================================================
+
+// (vi) Bitwise right shift operator >>     This is work like a move the each bit to right and left side last bit if already 1 then added 1 or already 0 then added 0. This behaviour's reason is don't change the sign (Positive or Negative)
+let bit_right_shift_op_num = 4;
+console.log("Bitwise Right Shift :", bit_right_shift_op_num >> 1);
+// ========================================================
+
+// (vii) Bitwise unsigned right shift operator >>>      This is work like a move the each bit to right and left side last bit added 0 here nothing consider that bit 0 or 1
+let bit_unsign_right_shift_op_num = 8;
+console.log("Bitwise Unsigned Right Shift :", bit_unsign_right_shift_op_num >>> 1);
 // --------------------------------------------------------
