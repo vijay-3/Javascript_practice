@@ -286,7 +286,18 @@ console.log(
 // --------------------------------------------------------
 
 // Geting user input by using prompt        This prompt always return the string datatype
-let user_name = prompt("Enter the name ");
-console.log("Your name is " + user_name);
+/*let user_name = prompt("Enter the name ");
+console.log("Your name is" + user_name);
 console.log("Type is : " + typeof user_name);
+
+// We can use type convertion method for change the datatype
+let user_age = prompt("Enter the age ");
+console.log("Your age is", Number(user_age));
+console.log("Type is : " + typeof Number(user_age));*/
+// --------------------------------------------------------
+
+// DOM - Document Object Model
+// We can access the HTML elements by using DOM
+let hello_world = document.getElementById("h2_1");
+hello_world.innerHTML = "Hey Hai";
 // --------------------------------------------------------
