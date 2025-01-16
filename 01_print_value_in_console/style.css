@@ -1,0 +1,9 @@
+.div_1{
+  overflow: hidden;
+  width: 2.1%;
+  white-space: nowrap;
+  transition: all 0.7s ease-in-out;
+}
+.div_1:hover{
+    width: 100%;
+}
