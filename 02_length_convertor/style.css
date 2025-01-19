@@ -1,0 +1,81 @@
+/* Default style reset */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Web page */
+html {
+  background-color: lightyellow;
+}
+
+/* Heading of page */
+#main_heading {
+  color: black;
+  justify-self: center;
+}
+
+/* Main div box */
+#main_container {
+  width: 35vw;
+  height: 60vh;
+  background-color: lightcoral;
+  color: black;
+  margin: 100px auto;
+  justify-items: center;
+  align-self: center;
+}
+
+/* Main div container's heading */
+#container_heading {
+  padding-top: 20px;
+}
+
+/* Unit selector container */
+#unit_selector_container {
+  display: flex;
+}
+
+/* Unit selector's elements */
+#length_selector_from,
+#length_selector_to {
+  font-weight: bold;
+  margin: 30px;
+  border: none;
+  outline: none;
+  padding: 2px;
+  overflow: hidden;
+  appearance: none;
+  width: max-content;
+}
+
+/* Arrow's line */
+.arrow_line {
+  margin-top: 38px;
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  float: left;
+}
+
+/* Arrow's triangle */
+.arrow_triangle {
+  margin-top: 33px;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid black;
+  float: left;
+}
+/* #indicator {
+  /* display: flex;
+  margin-top: 35px;
+  width: 20px;
+
+  /* display: flex;
+  width: 20px;
+  height: 4px;
+  margin-top: 38px;
+  background-color: black;
+}
+
