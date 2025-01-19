@@ -8,45 +8,53 @@
     <title>Length Convertor</title>
 </head>
 
-<!-- Heading -->
-<h1 id="main_heading">Length Convertor</h1>
+<body>
 
-<!-- All elements containing container -->
-<div id="main_container">
+    <!-- All elements containing container -->
+    <div id="main_container">
 
-    <!-- Container heading's container -->
-    <h3 id="container_heading">Centimeter to Inch</h3>
+        <!-- Container heading's container -->
+        <h2 id="container_heading">Length Convertor</h2>
 
-    <!-- Length unit selector's container -->
-    <div id="unit_selector_container">
-        <select name="length_from" id="length_selector_from">
-            <option value="" disabled selected hidden>Select Type</option>
-            <option value="cm">Centimeter</option>
-            <option value="inch">Inch</option>
-        </select>
+        <!-- Length unit selector's container -->
+        <div id="unit_selector_container">
+            <select name="length_from" id="length_selector_from">
+                <option value="" disabled selected hidden>Select Unit</option>
+                <option value="cm">Centimeter</option>
+                <option value="inch">Inch</option>
+            </select>
 
-        <!-- Arrow container -->
-        <div>
-            <div class="arrow_line"></div>
-            <div class="arrow_triangle"></div>
+            <!-- Arrow container -->
+            <div>
+                <div class="arrow_line"></div>
+                <div class="arrow_triangle"></div>
+            </div>
+            <select name="length_to" id="length_selector_to">
+                <option value="" disabled selected hidden>Select Unit</option>
+                <option value="cm">Centimeter</option>
+                <option value="inch">Inch</option>
+            </select>
         </div>
-        <select name="length_to" id="length_selector_to">
-            <option value="" disabled selected hidden>Select Type</option>
-            <option value="cm">Centimeter</option>
-            <option value="inch">Inch</option>
-        </select>
+
+        <br>
+
+        <!-- User's input box -->
+        <form action="" id="input_main_container">
+            <div id="input_sub_container">
+                <input type="text" id="user_input_box" placeholder=" ">
+                <label for="length" id="for_user_placeholder">Enter the length</label>
+            </div>
+        </form>
+
+        <br>
+
+        <!-- Submit button -->
+        <button type="submit" id="submit_button">Calculate</button>
+
+        <!-- Print the result -->
+        <div id="result_container"></div>
     </div>
 
-    <br>
-
-    <!-- User's input box -->
-    <input type="text" placeholder="Enter a number" id="user_input">
-
-    <!-- Submit button -->
-    <button type="submit" id="submit_button">Calculate</button>
-
-    <!-- Print the result -->
-    <div id="result_container"></div>
-</div>
+</body>
 
 </html>

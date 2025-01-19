@@ -19,12 +19,14 @@ html {
 /* Main div box */
 #main_container {
   width: 35vw;
-  height: 60vh;
+  height: 65vh;
   background-color: lightcoral;
   color: black;
   margin: 100px auto;
   justify-items: center;
   align-self: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgb(182, 181, 181);
 }
 
 /* Main div container's heading */
@@ -40,14 +42,17 @@ html {
 /* Unit selector's elements */
 #length_selector_from,
 #length_selector_to {
+  font-size: 15px;
+  background-color: gray;
+  color: white;
   font-weight: bold;
   margin: 30px;
   border: none;
   outline: none;
   padding: 2px;
-  overflow: hidden;
   appearance: none;
-  width: max-content;
+  width: 110px;
+  text-align: center;
 }
 
 /* Arrow's line */
@@ -67,15 +72,37 @@ html {
   border-left: 7px solid black;
   float: left;
 }
-/* #indicator {
-  /* display: flex;
-  margin-top: 35px;
-  width: 20px;
 
-  /* display: flex;
-  width: 20px;
-  height: 4px;
-  margin-top: 38px;
-  background-color: black;
+/* Input box container */
+#input_main_container {
+  position: relative;
 }
 
+/* Input box */
+#user_input_box {
+  height: 30px;
+  font-size: 16px;
+  transition: all 0.5s ease;
+}
+
+/* Placeholder */
+#for_user_placeholder {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding: 5px;
+  color: gray;
+  outline: none;
+}
+
+/* Submit button */
+#submit_button {
+  display: block;
+  margin: 30px auto;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0px 0px 10px 0px grey;
+}
