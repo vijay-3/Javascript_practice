@@ -18,15 +18,14 @@ html {
 
 /* Main div box */
 #main_container {
-  width: 35vw;
-  height: 65vh;
-  background-color: lightcoral;
+  width: 476px;
+  height: 411.45px;
+  background-color: lavenderblush;
   color: black;
   margin: 100px auto;
   justify-items: center;
-  align-self: center;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgb(182, 181, 181);
+  box-shadow: 0px 0px 10px 0px rgb(95, 95, 95);
 }
 
 /* Main div container's heading */
@@ -43,7 +42,7 @@ html {
 #length_selector_from,
 #length_selector_to {
   font-size: 15px;
-  background-color: gray;
+  background-color: rgb(173, 39, 39);
   color: white;
   font-weight: bold;
   margin: 30px;
@@ -53,6 +52,7 @@ html {
   appearance: none;
   width: 110px;
   text-align: center;
+  border-radius: 7px;
 }
 
 /* Arrow's line */
@@ -73,36 +73,81 @@ html {
   float: left;
 }
 
-/* Input box container */
+/* Form container */
 #input_main_container {
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+/* Input box container */
+#input_sub_container {
   position: relative;
 }
 
 /* Input box */
 #user_input_box {
-  height: 30px;
+  height: 35px;
   font-size: 16px;
-  transition: all 0.5s ease;
+  border-radius: 10px;
+  outline: none;
+  text-align: start;
+  box-sizing: content-box;
+  padding-left: 10px;
 }
 
 /* Placeholder */
 #for_user_placeholder {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  padding: 5px;
+  left: 5px;
+  top: 7px;
+  padding: 0px 5px;
   color: gray;
-  outline: none;
+  background-color: #fff;
+  pointer-events: none;
+  transition: all 0.7s ease;
+}
+
+/* Focus effect */
+#user_input_box:focus {
+  border-color: green;
+}
+#user_input_box:focus + #for_user_placeholder,
+#user_input_box:not(:placeholder-shown) + #for_user_placeholder {
+  top: -7.5px;
+  font-size: 12px;
+  color: green;
+}
+
+#user_input_box::placeholder {
+  color: transparent;
 }
 
 /* Submit button */
 #submit_button {
-  display: block;
   margin: 30px auto;
   font-size: 20px;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  color: white;
+  border-radius: 15px;
   padding: 5px;
   box-shadow: 0px 0px 10px 0px grey;
+  background-color: rgb(1, 206, 1);
+  transition: all 0.5s ease;
+}
+
+#submit_button:hover {
+  background-color: rgb(0, 165, 0);
+}
+
+/* Result */
+#result_container {
+  width: 150px;
+  height: 35px;
+  background-color: darkblue;
+  color: yellow;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 5px;
+  font-weight: bold;
 }

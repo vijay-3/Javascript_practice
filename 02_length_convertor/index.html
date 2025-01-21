@@ -41,7 +41,7 @@
         <!-- User's input box -->
         <form action="" id="input_main_container">
             <div id="input_sub_container">
-                <input type="text" id="user_input_box" placeholder=" ">
+                <input type="text" id="user_input_box" placeholder=" " autocomplete="off">
                 <label for="length" id="for_user_placeholder">Enter the length</label>
             </div>
         </form>
@@ -49,11 +49,14 @@
         <br>
 
         <!-- Submit button -->
-        <button type="submit" id="submit_button">Calculate</button>
+        <button type="submit" id="submit_button" onclick="centi_to_inch()">Calculate</button>
 
         <!-- Print the result -->
         <div id="result_container"></div>
     </div>
+
+    <!-- Script file connection -->
+     <script src="script.js"></script>
 
 </body>
 
