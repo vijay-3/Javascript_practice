@@ -142,7 +142,7 @@ html {
 
 /* Result */
 #result_container {
-  width: 150px;
+  width: 50%;
   height: 35px;
   background-color: darkblue;
   color: yellow;
