@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Temperature Convertor</title>
+</head>
+
+<body>
+
+    <!-- All elements containing container -->
+    <div id="main_container">
+
+        <!-- Container heading's container -->
+        <h2 id="container_heading">Temperature Convertor</h2>
+
+        <!-- Length unit selector's container -->
+        <div id="temperature_selector_container">
+            <select name="temperature_from" id="temperature_selector_from">
+                <option value="" disabled selected hidden>Select Temperature</option>
+                <option value="celsi">Celsius</option>
+                <option value="fahren">Fahrenhit</option>
+            </select>
+
+            <!-- Arrow container -->
+            <div>
+                <div class="arrow_line"></div>
+                <div class="arrow_triangle"></div>
+            </div>
+            <select name="temperature_to" id="temperature_selector_to">
+                <option value="" disabled selected hidden>Select Temperature</option>
+                <option value="celsi">Celsius</option>
+                <option value="fahren">Fahrenhit</option>
+            </select>
+        </div>
+
+        <br>
+
+        <!-- User's input box -->
+        <form action="" id="input_main_container">
+            <div id="input_sub_container">
+                <input type="text" id="user_input_box" placeholder=" " autocomplete="off">
+                <label for="temperature" id="for_user_placeholder">Enter the temperature</label>
+            </div>
+        </form>
+
+        <br>
+
+        <!-- Submit button -->
+        <button type="submit" id="submit_button" onclick="convert()">Calculate</button>
+
+        <!-- Print the result -->
+        <div id="result_container"></div>
+    </div>
+
+    <!-- Script file connection -->
+     <script src="script.js"></script>
+
+</body>
+
+</html>
