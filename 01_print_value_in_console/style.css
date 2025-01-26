@@ -8,3 +8,7 @@
 .div_1:hover {
   width: 100%;
 }
+
+.div_1:not(:hover) {
+  width: 2.1%;
+}

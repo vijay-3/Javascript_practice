@@ -301,3 +301,61 @@ console.log("Type is : " + typeof Number(user_age));*/
 let hello_world = document.getElementById("h2_1");
 hello_world.innerHTML = "Hey Hai";
 // --------------------------------------------------------
+
+// Maths obect
+// Functions are must used with parentheses - ()
+// (i) Round function			This is used for change the decimal point number to whole number by mathematical rules
+console.log("Math.round :", Math.round(4.0));
+console.log("Math.round :", Math.round(4.3));
+console.log("Math.round :", Math.round(4.5));
+console.log("Math.round :", Math.round(4.7));
+// ========================================================
+
+// (ii) Floor function			This is used for change the decimal point number to whole number by low value
+console.log("Math.flour :", Math.floor(4.0));
+console.log("Math.flour :", Math.floor(4.3));
+console.log("Math.flour :", Math.floor(4.5));
+console.log("Math.flour :", Math.floor(4.7));
+// ========================================================
+
+// (iii) Ceil function			This is used for change the decimal point number to whole number by high value
+console.log("Math.ceil :", Math.ceil(4.0));
+console.log("Math.ceil :", Math.ceil(4.3));
+console.log("Math.ceil :", Math.ceil(4.6));
+console.log("Math.ceil :", Math.ceil(4.7));
+// ========================================================
+
+// (iv) Sqrt function			This is used for find the square root of the given number
+console.log("Math.sqrt :", Math.sqrt(83746));
+// ========================================================
+
+// (v) Abs function				This is used for change the negative number to positive number
+console.log("Math.ahs :", Math.abs(-34));
+console.log("Math.abs :", Math.abs(43));
+// ========================================================
+
+// (iv) Pow function			This is used for find the Exponential
+console.log("Math.pow :", Math.pow(3, 44));
+// ========================================================
+
+// (v) Min function				This is used for find the minimum number in given numbers
+console.log("Math.min :", Math.min(4, 2, 9, 0, 7));
+// ========================================================
+
+// (vi) Max function			This is used for find the maximum number in given numbers
+console.log("Math.max :", Math.max(43, 3, 56, 45, 2));
+// ========================================================
+
+// (vii) Random function		This is used for generate the random number withing 0 to 1
+console.log("Math.random :", Math.random());
+console.log("Math.random :", Math.floor(Math.random() * 6) + 1);
+// ========================================================
+
+// These are called constant or property. This is use without parentheses - ()
+// (viii) PI constant
+console.log("Math.PI :", Math.PI);
+// ========================================================
+
+// (ix) E constant
+console.log("Math.E :", Math.E);
+// --------------------------------------------------------
