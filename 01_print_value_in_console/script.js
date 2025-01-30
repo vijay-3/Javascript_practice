@@ -579,7 +579,7 @@ console.log(
 );
 console.log(
   "Includes method used for check the letter or word in the sentence : " +
-    string23.includes("w")
+    string23.includes('w')
 );
 // --------------------------------------------------------
 
@@ -588,7 +588,7 @@ console.log(
 let string24 = "Check the starting letter.";
 console.log(
   "Startwith method used for check the word by starting letter : " +
-    string24.startsWith("l")
+    string24.startsWith('l')
 );
 // --------------------------------------------------------
 
@@ -597,6 +597,6 @@ console.log(
 let string25 = "Check the ending letter.";
 console.log(
   "Endswith method used for check the word by ending letter : " +
-    string25.endsWith("g")
+    string25.endsWith('g')
 );
 // --------------------------------------------------------
