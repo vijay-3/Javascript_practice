@@ -359,3 +359,244 @@ console.log("Math.PI :", Math.PI);
 // (ix) E constant
 console.log("Math.E :", Math.E);
 // --------------------------------------------------------
+
+// String combine
+// (i) Concate by operator  +
+let string1 = "Hai ",
+  string2 = "how ",
+  string3 = "are ",
+  string4 = "you ",
+  string5 = "?";
+console.log(
+  "Combine the string using + operator : " +
+    string1 +
+    string2 +
+    string3 +
+    string4 +
+    string5
+);
+// ========================================================
+
+// (ii) Concate by method or function  concat()
+let string6 = "Hai ",
+  string7 = "how ",
+  string8 = "are ",
+  string9 = "you ",
+  string10 = "?";
+console.log(
+  "Combine the string using concat method or function : " +
+    string6.concat(string7, string8, string9, string10)
+);
+// --------------------------------------------------------
+
+// String separation
+// (i) Slice method
+let string11 = "I think I am good.";
+console.log(
+  "Slice method used for separate the character from start by positive index : " +
+    string11.slice(8, 18)
+);
+console.log(
+  "Slice method used for separate the character from start by positive index : " +
+    string11.slice(1)
+);
+console.log(
+  "Slice method used for separate the character from end by using negative index : " +
+    string11.slice(-16)
+);
+console.log(
+  "Slice method used for separate the character from end by using negative index : " +
+    string11.slice(-10, -6)
+);
+// ========================================================
+
+// (ii) Substring method
+let string12 = "How about you?";
+console.log(
+  "Substring method used for separate the character from start by positive index : " +
+    string12.substring(4, 9)
+);
+console.log(
+  "Substring method used for separate the character from start by positive index : " +
+    string12.substring(0)
+);
+console.log(
+  "Substring method used for separate the character : " +
+    string12.substring(9, 2)
+); // Here the indexs are swaped because of small index must placed first
+// --------------------------------------------------------
+
+// String replacement
+let string13 = "Good to see you.";
+console.log(
+  "Replace method used for change the character or string from one to another : " +
+    string13.replace("see", "meet")
+);
+// --------------------------------------------------------
+
+// Change the case of the character
+// (i) Touppercase method
+let string14 = "Changed to upper-case";
+console.log(
+  "Touppercase method used for change the character from lower case to upper case : " +
+    string14.toUpperCase()
+);
+// ========================================================
+
+// (ii) Tolowercase method
+let string15 = "CHANGED TO LOWER-CASE";
+console.log(
+  "Tolowercase method used for change the character from upper case to lower case : " +
+    string15.toLowerCase()
+);
+// --------------------------------------------------------
+
+// Find the length of the sentence
+// length property
+let string16 = "Find the length of the sentence.";
+console.log(
+  "Length property used for find the length of the senctence :",
+  string16.length
+);
+// --------------------------------------------------------
+
+// (i) Remove the extra space in sentence
+// Trim method
+let string17 = " Remove the extra space in the sentence. ";
+console.log(
+  "Trim method used for remove the space in the sentence : " + string17.trim()
+);
+// ========================================================
+
+// (ii) Remove the extra space at the start of the sentence
+// Trimstart method
+let string18 = "  Remove the extra space at the start of the sentence.  ";
+console.log(
+  "Trimstart method used for remove the space at the starting position in sentence : " +
+    string18.trimStart()
+);
+// ========================================================
+
+// (iii) Remove the extra space at the end of the sentence
+// Trimend method
+let string19 = "  Remove the extra space at the end of the sentence.   ";
+console.log(
+  "Trimend method used for remove the space at the ending position in sentence : " +
+    string19.trimEnd()
+);
+// --------------------------------------------------------
+
+// (i) Add the character or number at the start of the string
+let pad_num1 = 1000;
+console.log(
+  "Padstart method used for add the letter or number to the only string " +
+    pad_num1.toString().padStart(6, "9")
+);
+
+let pad_num2 = "1000";
+console.log(
+  "Padstart method used for add the letter or number to the only string : " +
+    pad_num2.padStart(6, 9)
+);
+// ========================================================
+
+// (ii) Add the character or number at the end of the string
+let pad_num3 = 3947;
+console.log(
+  "Padend method used for add the letter or number to the only string : " +
+    pad_num3.toString().padEnd(6, "7")
+);
+
+let pad_num4 = "3947";
+console.log(
+  "Padend method used for add the letter or number to the only string : " +
+    pad_num4.padEnd(6, 7)
+);
+// --------------------------------------------------------
+
+// Search the character by index
+// (i) [index]
+let string20 = "Search the character.";
+console.log("[index] used for search the character : " + string20[5]);
+// ========================================================
+
+// (ii) Charat(index)
+console.log(
+  "Charat method used for search the character : " + string20.charAt(9)
+);
+// ========================================================
+
+// (iii) Charcodeat(index)
+console.log(
+  "Charatcode method used for find the ASCII code of the searched character :",
+  string20.charCodeAt(10)
+);
+// --------------------------------------------------------
+
+// Search the index by character or word
+// (i) indexOf()
+let string21 = "Here search the index by character";
+console.log(
+  "Indexof method used for search the index of given character from start :",
+  string21.indexOf("i")
+);
+console.log(
+  "Indexof method used for search the index of given word from start :",
+  string21.indexOf("by")
+);
+// ========================================================
+
+// (ii) lastindex()
+console.log(
+  "Lastindexof method used for search the index of given character from end :",
+  string21.lastIndexOf("n")
+);
+console.log(
+  "Lastindexof method used for search the index of given word from end :",
+  string21.lastIndexOf("index")
+);
+// --------------------------------------------------------
+
+// Search the index of the word
+// Search()
+let string22 = "Here search the index by word.";
+console.log(
+  "Search method used for search the index of the given word :",
+  string22.search("the")
+);
+console.log(
+  "Search method used for search the index of the given character :",
+  string22.search("h")
+);
+// --------------------------------------------------------
+
+// Check the string or letter in the sentence
+// Includes()
+let string23 = "Check if the letter or word available in sentence.";
+console.log(
+  "Includes method used for check the letter or word in the sentence : " +
+    string23.includes("if")
+);
+console.log(
+  "Includes method used for check the letter or word in the sentence : " +
+    string23.includes("w")
+);
+// --------------------------------------------------------
+
+// Check the word start by letter
+// Startswith()
+let string24 = "Check the starting letter.";
+console.log(
+  "Startwith method used for check the word by starting letter : " +
+    string24.startsWith("l")
+);
+// --------------------------------------------------------
+
+// Check the word end by letter
+// Endswith()
+let string25 = "Check the ending letter.";
+console.log(
+  "Endswith method used for check the word by ending letter : " +
+    string25.endsWith("g")
+);
+// --------------------------------------------------------
