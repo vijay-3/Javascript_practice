@@ -1,0 +1,92 @@
+/* Default style reset */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* HTML Body */
+body {
+  background-color: #ffedfa;
+}
+/* Main container */
+#main_container {
+  width: 500px;
+  height: 450px;
+  background-color: #e195ab;
+  color: #ffff;
+  justify-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Container's heading */
+#main_container_heading {
+  margin-top: 40px;
+}
+
+/* Container of the input box and label */
+#input_box_div {
+  margin-top: 70px;
+  position: relative;
+}
+
+/* Input box */
+#input_box {
+  height: 30px;
+  outline: none;
+  transition: all 1s ease;
+  padding-left: 5px;
+}
+
+/* Input box placeholder */
+#input_box_label {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  padding: 0px 4px;
+  color: gray;
+  pointer-events: none;
+  background-color: white;
+  transition: all 1s ease;
+}
+
+#input_box:focus {
+  border: 2px solid;
+  border-color: blue;
+}
+
+#input_box:focus + #input_box_label,
+#input_box:not(:placeholder-shown) + #input_box_label {
+  top: -7px;
+  left: 7px;
+  color: blue;
+  font-size: 12px;
+}
+
+/* Generator button */
+#gen_button {
+  margin-top: 40px;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ccdf92;
+  box-shadow: 0px 0px 5px 0px gray, 0px 0px 10px 0px gray;
+}
+
+#gen_button:hover {
+  background-color: #aebe7e;
+}
+
+#gen_button:active {
+  transform: scale(0.9);
+}
+
+#letter_result {
+  margin-top: 35px;
+  font-weight: bold;
+  font-size: 20px;
+}
