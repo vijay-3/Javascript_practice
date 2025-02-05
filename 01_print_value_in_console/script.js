@@ -579,7 +579,7 @@ console.log(
 );
 console.log(
   "Includes method used for check the letter or word in the sentence : " +
-    string23.includes('w')
+    string23.includes("w")
 );
 // --------------------------------------------------------
 
@@ -588,7 +588,7 @@ console.log(
 let string24 = "Check the starting letter.";
 console.log(
   "Startwith method used for check the word by starting letter : " +
-    string24.startsWith('l')
+    string24.startsWith("l")
 );
 // --------------------------------------------------------
 
@@ -597,6 +597,60 @@ console.log(
 let string25 = "Check the ending letter.";
 console.log(
   "Endswith method used for check the word by ending letter : " +
-    string25.endsWith('g')
+    string25.endsWith("g")
+);
+// --------------------------------------------------------
+
+// Template literals      This is used for write the string with symbols in easy way
+// This is introduced in 2015 with ECMAScript6 or ES6
+let string26 = "Hey hai I am",
+  string27 = "about you.";
+console.log(`Template literals : ${string26} going to think ${string27}`);
+// ========================================================
+
+// We can also write multiple line string
+let string28 = `You're doing
+home"s work.`;
+console.log("Template literals : " + string28);
+// --------------------------------------------------------
+
+// Excersice for template literals
+let templa_num1 = 5,
+  templa_total = 95;
+console.log(`"You have ${templa_num1} items in your cart.`);
+console.log(`Your bill amount is $${templa_total}"`);
+// --------------------------------------------------------
+
+// 1 Dimensional array
+let array1 = [23, 25, 45, 34];
+console.log("Array :", array1[0]);
+// ========================================================
+
+// We can also add different type of the variables in array
+let array2 = [34, "e", "34", `as`];
+console.log("Array : " + array2[1]);
+// ========================================================
+
+// Access the last string's last letter
+console.log(
+  "Array : " + array2[array2.length - 1][array2[array2.length - 1].length - 1]
+);
+// ========================================================
+
+// We can also include multi-level array inside the array
+let array3 = [23, [34, 41], "How", 842];
+console.log(`Array : ${array3[1][0]}`);
+// --------------------------------------------------------
+
+// 2 Dimensional array
+// let o04 = 8;
+let array4 = [
+  [34, 98],
+  [83, 3],
+  [98, 5],
+  [45, 0o4],
+];
+console.log(
+  `Array : ${array4[array4.length - 1][array4[array4.length - 1].length - 1]}`
 );
 // --------------------------------------------------------
