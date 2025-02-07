@@ -811,3 +811,36 @@ console.log(
   [...array11, ...array12, ...array13]
 );
 // --------------------------------------------------------
+
+// Exersice
+let array14 = [5, 8, 10, 7, 9, 11];
+
+// Replace 7, 9, 11 with 17, 19, 111
+console.log("Before replace exercise :", array14);
+console.log("Replace exercise :", array14.splice(3, 3, 17, 19, 111));
+console.log("After replaced exercise :", array14);
+// ========================================================
+
+// Insert 100 in the beginning
+console.log("Before insert at beginning :", array14);
+console.log("Insert exercise :", array14.unshift(100));
+console.log("After inserted at beginning :", array14);
+// ========================================================
+
+// Insert 200 in last but one position
+console.log("Before insert last before one position :", array14);
+console.log("Insert exercise :", array14.splice(6, 0, 200));
+console.log("After inserted last before one position :", array14);
+// ========================================================
+
+// Add 1000 at the end
+console.log("Before added at the end :", array14);
+console.log("Add exercise :", array14.push(1000));
+console.log("After added at the end", array14);
+// ========================================================
+
+// Insert 0 in the middle
+console.log("Before insert in the middle :", array14);
+console.log("Insert exercise :", array14.splice(Math.floor(array14.length / 2), 0, 0));
+console.log("After inserted in the middle :", array14)
+// --------------------------------------------------------
