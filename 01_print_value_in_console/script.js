@@ -389,7 +389,7 @@ console.log(
 );
 // --------------------------------------------------------
 
-// String separation
+// String separation				This is not include the last index this stop before the given last index
 // (i) Slice method
 let string11 = "I think I am good.";
 console.log(
@@ -621,6 +621,7 @@ console.log(`"You have ${templa_num1} items in your cart.`);
 console.log(`Your bill amount is $${templa_total}"`);
 // --------------------------------------------------------
 
+// Array
 // 1 Dimensional array
 let array1 = [23, 25, 45, 34];
 console.log("Array :", array1[0]);
@@ -643,7 +644,6 @@ console.log(`Array : ${array3[1][0]}`);
 // --------------------------------------------------------
 
 // 2 Dimensional array
-// let o04 = 8;
 let array4 = [
   [34, 98],
   [83, 3],
@@ -652,5 +652,162 @@ let array4 = [
 ];
 console.log(
   `Array : ${array4[array4.length - 1][array4[array4.length - 1].length - 1]}`
+);
+// --------------------------------------------------------
+
+// Array methods
+// Push					This is used for add the element to array at last and it will return the size of the new array
+let array5 = ["a", "g", "e", "h"];
+console.log(
+  "Push method used for add the element to the last :",
+  array5.push("j")
+);
+console.log("Array :", array5);
+// ========================================================
+
+// Pop					This is used for remove the element from array at last index and it will return the removed element
+console.log(
+  "Pop method used for remove the element from the last index : " + array5.pop()
+);
+console.log("Array :", array5);
+// ========================================================
+
+// Shift				This is used for remove the element from array at first index and then other elements moves the position and it will return the removed element
+console.log(
+  "Shift method used for remove the element from the first index : " +
+    array5.shift()
+);
+console.log("Array :", array5);
+// ========================================================
+
+// Unshift				This is used for add the element to array at first index and then other elements moves the position and it will return the size of the new array
+console.log(
+  "Unshift method used for add the element to the first index :",
+  array5.unshift("a")
+);
+console.log("Array :", array5);
+// ========================================================
+
+// Delete				This is used for delete the element from array at particular given index but that place will be remain empty value and it will return the boolean value
+console.log(
+  "Delete method used for delete the element from the particular given index :",
+  delete array5[2]
+);
+console.log("Array :", array5);
+// ========================================================
+
+// Splice				This is used for remove the element from array at given index to number of elements by number and it will move the element position and it will return the removed value
+console.log(
+  "Splice method used for remove the element from the given index to given number of elements :",
+  array5.splice(1, 1)
+);
+console.log("Array :", array5);
+
+// We can also replace the value used by splice method
+console.log(
+  "Splice method also used for replace the element :",
+  array5.splice(1, 1, "b")
+);
+console.log("Array :", array5);
+
+// We can also add the element to the array without delete or remove the element used by splice method
+console.log(
+  "Splice method also used for add the element :",
+  array5.splice(2, 0, "c")
+);
+console.log("Array :", array5);
+// ========================================================
+
+// Slice				This is used for get the particular element from the array or string and this will return the gotted value
+// And this is not include the last given index's element
+console.log(
+  "Slice method used for show the element by user given index : ",
+  array5.slice(1, 3)
+);
+console.log("Array :", array5);
+
+// We can also get the element from last
+console.log(
+  "Slice method also used for show the element from last by user given index : ",
+  array5.slice(-3, -1)
+);
+console.log("Array :", array5);
+// ========================================================
+
+// Reverse				This is used for reverse the array and this will return the reversed array
+console.log("Before the reverse :", array5);
+console.log("Reverse method used for reverse the array :", array5.reverse());
+console.log("After the reverse :", array5);
+// ========================================================
+
+// Join					This is used for create the string from array and this will return the joined string
+// But last element's after nothing will add
+console.log(
+  "Join method used for join the array elements in single word with comma (,) this is default : " +
+    array5.join()
+);
+console.log("Array :", array5);
+
+// Here we join the array elements like a normal string
+console.log(
+  "Join method also used for join the array elements in single word like a normal string : " +
+    array5.join("")
+);
+console.log("Array :", array5);
+
+// Here we join the array elements like a space between the letters
+console.log(
+  "Join method also oused for join the array elements in single word with space between the letters : " +
+    array5.join(" ")
+);
+console.log("Array :", array5);
+// ========================================================
+
+// Split			This is used for create the array from string and it will return the array
+// This is work based on user given parameter otherwise it will create the array with single element that element is user given string
+// Here we use the single quote ('') symbol used as a parameter it will separate the letter based individual letter
+let string29 = "goodbye";
+console.log(
+  "Split method used for create the array from given string :",
+  string29.split("")
+);
+console.log("String : " + string29);
+
+// Here we use the comma (,) symbol used as a parameter it will separate the letter based comma
+let string30 = "3, 5, , r, i, j";
+console.log(
+  "Split method also used for create the array from given string :",
+  string30.split(",")
+);
+console.log("String : " + string30);
+// ========================================================
+
+// Concat				This is used for combine the two arrays
+// Here we combine the two arrays
+let array6 = [4, 6, 2, 90, 45],
+  array7 = [34, 98, 0, 34, 7];
+console.log(
+  "Concat method used for combine the two or more array into single array :",
+  array6.concat(array7)
+);
+
+// Here we combine the more two arrays
+let array8 = [34, 80, 32, 98, 0o7],
+  array9 = [34, 0x9, 3, 93, 7],
+  array10 = [3, 0, 5, 98, 6];
+console.log(
+  "Concat method used for combine the two or more array into single array :",
+  array6.concat(array7, array8, array9, array10)
+);
+// ========================================================
+
+// Spread			This is used for extract the elements and it will return the extracted elements
+// It is also combine the strings or arrays
+let array11 = [3, 9, 0, 3, 7],
+  array12 = [34, 0, 78, 983, 439],
+  array13 = [0e3, 87, 56, 73, 98];
+console.log(
+  "Spread method used for extract the elements from the packed one :",
+  [...array11, ...array12, ...array13]
 );
 // --------------------------------------------------------
