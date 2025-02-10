@@ -841,6 +841,23 @@ console.log("After added at the end", array14);
 
 // Insert 0 in the middle
 console.log("Before insert in the middle :", array14);
-console.log("Insert exercise :", array14.splice(Math.floor(array14.length / 2), 0, 0));
-console.log("After inserted in the middle :", array14)
+console.log(
+  "Insert exercise :",
+  array14.splice(Math.floor(array14.length / 2), 0, 0)
+);
+console.log("After inserted in the middle :", array14);
+// --------------------------------------------------------
+
+// If..else condition           This is used for check the condition true or false if true then run the given code otherwise skip the code
+if (22 == 22) {
+  console.log("This is true");
+} else {
+  console.log("This is false");
+}
+// ========================================================
+if (23 == 3) {
+  console.log("This is true");
+} else {
+  console.log("This is false");
+}
 // --------------------------------------------------------
