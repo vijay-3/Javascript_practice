@@ -1,0 +1,73 @@
+/* Reset the default style */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: 0px;
+}
+
+/* Html Page */
+html {
+  background-color: #e5d0ac;
+}
+
+/* Style the div */
+.main_container {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #c14600;
+  justify-items: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 5px gray;
+}
+
+/* Container's heading */
+.main_container_heading {
+  margin-top: 40px;
+  color: #fef9e1;
+}
+
+/* User input area div */
+.input_area {
+  justify-items: center;
+}
+/* User text area */
+#input_text_area {
+  width: 200px;
+  height: 250px;
+  resize: none;
+  font-size: 17px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* Result button */
+.result_button {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fef9e1;
+  background-color: #ff9d23;
+  transition: all 0.5s ease;
+}
+
+/* Result button hover effect */
+.result_button:hover {
+  background-color: #e48a1c;
+}
+
+/* Result area */
+.result_area {
+  width: 25%;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fef9e1;
+  text-align: center;
+  align-content: center;
+}
