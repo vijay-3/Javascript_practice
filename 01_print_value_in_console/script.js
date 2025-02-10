@@ -849,15 +849,15 @@ console.log("After inserted in the middle :", array14);
 // --------------------------------------------------------
 
 // If..else condition           This is used for check the condition true or false if true then run the given code otherwise skip the code
-if (22 == 22)					// Here the condition is true
-{
+if (22 == 22) {
+  // Here the condition is true
   console.log("This is true");
 } else {
   console.log("This is false");
 }
 // ========================================================
-if (23 == 3)					// Here the condition is false
-{
+if (23 == 3) {
+  // Here the condition is false
   console.log("This is true");
 } else {
   console.log("This is false");
