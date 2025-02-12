@@ -1,0 +1,80 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.main_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2c3930;
+}
+
+/* Element container */
+.sub_container {
+  width: 450px;
+  height: 500px;
+  background-color: #3f4f44;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  color: #a27b5c;
+}
+
+/* Form */
+#user_input_form {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+/* Input_box */
+.user_input_box {
+  width: 200px;
+  height: 40px;
+  margin-top: 20px;
+  padding-left: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.user_input_box:focus {
+  font-size: 18px;
+}
+
+.user_input_box::placeholder {
+  font-size: 16px !important;
+}
+/* Button */
+.result_button {
+  margin-top: 60px;
+  width: 100px;
+  height: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #4d9c66;
+  transition: all 0.2s ease;
+}
+
+/* Button click effect */
+.result_button:active {
+  background-color: #48805a;
+}
+/* Result div */
+.result_container {
+  /* width: 150px; */
+  height: 45px;
+  text-align: center;
+  align-content: center;
+  color: #dcd7c9;
+  font-size: 23px;
+}
