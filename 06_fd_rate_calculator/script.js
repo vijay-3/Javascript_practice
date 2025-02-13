@@ -17,8 +17,12 @@ document
       interest_rate = 6.5;
     } else if (work_month >= 7 && work_month <= 9) {
       interest_rate = 6.8;
-    } else {
+    } else if (work_month >= 10) {
       interest_rate = 7;
+    } else {
+      result[0].innerHTML = `Invalid input`;
     }
-    result[0].innerHTML = `Your interest rate is ${interest_rate}%`;
+    if (interest_rate != 0) {
+      result[0].innerHTML = `Your interest rate is ${interest_rate}%`;
+    }
   });
