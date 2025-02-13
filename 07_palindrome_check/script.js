@@ -13,7 +13,7 @@ document
     // Check the given input is palindrome
     if (
       user_string.toLowerCase() ===
-      user_string.toLowerCase().split("").reerse().join("")
+      user_string.toLowerCase().split("").reverse().join("")
     ) {
       //   user_string[0].value.toLowerCase() === (user_string[0].value).toLowerCase().split("").reverse().join(""))        This another type of condition code
       result[0].innerHTML = `${original_user_string} is palindrome.`;
