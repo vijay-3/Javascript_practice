@@ -1,5 +1,5 @@
-const SUBMIT_BUTTON = document.getElementById("user_input_form");
 // Submit button works without reload the page
+const SUBMIT_BUTTON = document.getElementById("user_input_form");
 SUBMIT_BUTTON.addEventListener("submit", function (event) {
   event.preventDefault();
   const USER_ORIGINAL_EB_UNIT = Number(
