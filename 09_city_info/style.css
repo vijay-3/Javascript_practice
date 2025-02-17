@@ -1,0 +1,72 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.main_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3d8d7a;
+}
+
+/* Element container */
+.sub_container {
+  width: 450px;
+  height: 500px;
+  background-color: #b3d8a8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  color: #fbffe4;
+}
+
+/* Form */
+#user_input_form {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+/* Input_box */
+#city {
+  width: 200px;
+  height: 40px;
+  margin-top: 20px;
+  padding-left: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Button */
+.result_button {
+  margin-top: 60px;
+  width: 100px;
+  height: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #a3d1c6;
+  transition: all 0.2s ease;
+}
+
+/* Button click effect */
+.result_button:active {
+  background-color: #759c93;
+}
+
+/* Result div */
+.result_container {
+  text-align: center;
+  align-content: center;
+  color: #fbffe4;
+  font-size: 23px;
+}
