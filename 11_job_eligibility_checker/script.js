@@ -24,5 +24,17 @@ function check_eligible() {
       OUTPUT_ELEMENT.style.color = "#F8F3D9";
       return (OUTPUT_ELEMENT.innerHTML = "Congrats! You Are Eligible for Job.");
     }
+    case "UG": {
+      OUTPUT_ELEMENT.style.color = "#F8F3D9";
+      return (OUTPUT_ELEMENT.innerHTML = "Congrats! You Are Eligible for Job.");
+    }
+    case "PG": {
+      OUTPUT_ELEMENT.style.color = "red";
+      return (OUTPUT_ELEMENT.innerHTML = "Sorry You Are Not Eligible for Job.");
+    }
+    case "Doctorate":{      
+      OUTPUT_ELEMENT.style.color = "red";
+      return (OUTPUT_ELEMENT.innerHTML = "Sorry You Are Not Eligible for Job.");
+    }
   }
 }
