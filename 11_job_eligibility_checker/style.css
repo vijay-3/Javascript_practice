@@ -1,0 +1,66 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.main_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #504b38;
+}
+
+/* Element container */
+.sub_container {
+  width: 450px;
+  height: 500px;
+  background-color: #b9b28a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  color: #f8f3d9;
+}
+
+/* Form */
+#user_input_form {
+  width: 350px;
+  height: 350px;
+  padding-top: 40px;
+  padding-left: 120px;
+}
+
+/* Input_box */
+.user_radio_button {
+  margin-top: 20px;
+  accent-color: red;
+}
+
+/* Button */
+.result_button {
+  margin-top: 60px;
+  width: 100px;
+  height: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #ebe5c2;
+  transition: all 0.2s ease;
+}
+
+/* Button click effect */
+.result_button:active {
+  background-color: #beb892;
+}
+
+/* Result div */
+.result_container {
+  text-align: center;
+  align-content: center;
+  /* color: #F8F3D9; */
+  font-size: 23px;
+  font-weight: bold;
+}
