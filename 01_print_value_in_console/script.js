@@ -856,10 +856,136 @@ if (22 == 22) {
   console.log("This is false");
 }
 // ========================================================
+
+// Here the condition is false
 if (23 == 3) {
-  // Here the condition is false
   console.log("This is true");
 } else {
   console.log("This is false");
 }
+// --------------------------------------------------------
+
+// Object
+let object1 = {
+  product_name: "car",
+  product_model: 2022,
+  product_price: 20000,
+  product_color: "blue",
+  product_warranty: "2 years",
+  object1_1: {
+    product_name1: "cycle",
+    product_model1: 2013,
+    product_color1: "yellow",
+    product_price1: 2100,
+  },
+  object1_arr1: ["cell", 2023, "brown"],
+};
+console.log("Object :", object1);
+// We can access individual properties using dot notation
+console.log("Object's property : " + object1.product_name);
+// ========================================================
+
+// We can also change the individual property
+object1.product_name = "bus";
+console.log("Object's property : " + object1.product_name);
+// ========================================================
+
+// We can also add new property using dot notation
+object1.product_quantity = 10;
+console.log("Object :", object1);
+// ========================================================
+
+// We can use square bracket notation for access the individual property
+console.log("Object's property :" + object1["product_color"]);
+// ========================================================
+
+// We can also use square bracket notation for change the individual value
+object1["product_color"] = "black";
+console.log("Object's property : " + object1["product_color"]);
+// ========================================================
+
+// We can use variable to assign or access the individual property but this is only use for square bracket notation
+let object1_var1 = "product_price"; // We can name that variable whatever we want
+object1[object1_var1] = 2700000;
+console.log("Object's property :", object1[object1_var1]);
+// ========================================================
+
+// We can access the object inside the object
+console.log("Object's object :", object1.object1_1);
+// ========================================================
+
+// We can also access the object inside object's property
+console.log(
+  "Object inside object's property :",
+  object1.object1_1.product_price1
+);
+// ========================================================
+
+object1.object1_func = function(){
+  console.log("Hey this is object1's function.");
+}
+object1.object1_func();
+// ========================================================
+
+// We can use array in object
+console.log("Array in object : ", object1.object1_arr1);
+// ========================================================
+
+// Another way of create the object
+let object2 = new Object();
+object2.product_name = "train";
+object2.product_model = 2000;
+object2.product_price = 100000000;
+object2.product_color = "green";
+object2.product_warranty = "22 years";
+console.log("Object :", object2);
+// We can access individual properties using dot notation
+console.log("Object's property :", object2.product_model);
+// ========================================================
+
+// We can also change the individual property
+object2.product_model = 2005;
+console.log("Object's property :", object2.product_model);
+// ========================================================
+
+// We can also add the new property
+object2.product_quantity = 4;
+console.log("Object :", object2);
+// ========================================================
+
+// We can use square bracket notation for access the individual property
+console.log("Object's property : " + object2["product_quantity"]);
+// ========================================================
+
+// We can also use square bracket notation for change the individual value
+object2["product_quantity"] = 7;
+console.log("Object's property :", object2["product_quantity"]);
+// ========================================================
+
+// We can use variable to assign or access the individual property but this is only use for square bracket notation
+let object2_var1 = "product_warranty"; // We can name that variable whatever we want
+object2[object2_var1] = "28 years";
+console.log("Object's property : " + object2[object2_var1]);
+// ========================================================
+
+// We can create the another object inside the object
+object2.object2_1 = new Object;
+object2.object2_1.product_name1 = "flight";
+object2.object2_1.product_model1 = 2015;
+object2.object2_1.product_color1 = "white";
+console.log("Object :", object2);
+console.log("Object inside object :", object2.object2_1);
+// ========================================================
+
+// We can add array inside the object
+object2.object2_arr1 = ["bike", 2024, "maron"];
+console.log("Object :", object2);
+console.log("Array inside object :", object2.object2_arr1);
+// ========================================================
+
+// We can write function inside the object
+object2.object2_func = function() {
+  console.log("Hey this is object2's function.")
+}
+object2.object2_func();
 // --------------------------------------------------------
