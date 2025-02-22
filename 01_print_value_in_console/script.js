@@ -879,6 +879,12 @@ let object1 = {
     product_price1: 2100,
   },
   object1_arr1: ["cell", 2023, "brown"],
+  object1_func1: function(){
+    console.log("Hey this is object1's function1.");
+  },
+  object1_func2() {
+    console.log("Hey this is object1's function2.");
+  }
 };
 console.log("Object :", object1);
 // We can access individual properties using dot notation
@@ -921,14 +927,14 @@ console.log(
 );
 // ========================================================
 
-object1.object1_func = function(){
-  console.log("Hey this is object1's function.");
-}
-object1.object1_func();
-// ========================================================
-
 // We can use array in object
 console.log("Array in object : ", object1.object1_arr1);
+console.log("Object :", object1);
+// ========================================================
+
+// We can access the function that is inside the function
+object1.object1_func1();
+object1.object1_func2();
 // ========================================================
 
 // Another way of create the object
@@ -984,8 +990,13 @@ console.log("Array inside object :", object2.object2_arr1);
 // ========================================================
 
 // We can write function inside the object
-object2.object2_func = function() {
-  console.log("Hey this is object2's function.")
+object2.object2_func1 = function() {
+  console.log("Hey this is object2's function.");
 }
-object2.object2_func();
+
+object2.object2_func2 = function() {
+  console.log("Hey this is object2's function.");
+}
+object2.object2_func1();
+object2.object2_func2();
 // --------------------------------------------------------
