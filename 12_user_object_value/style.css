@@ -1,0 +1,55 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* Form container */
+.login_container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form content container */
+.login_content_container {
+    width: 500px;
+    height: 450px;
+}
+
+/* Form */
+#user_login_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Form element */
+.form_element {
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+}
+
+/* Label */
+label {
+  width: 150px;
+  text-align: right;
+}
+
+/* Input */
+input {
+  /* flex: 1; */
+  width: 300px;
+  padding: 5px;
+}
+
+/* Submit button */
+button {
+  width: 100px;
+  margin-left: 10px;
+}
