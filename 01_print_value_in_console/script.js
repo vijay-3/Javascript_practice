@@ -879,12 +879,12 @@ let object1 = {
     product_price1: 2100,
   },
   object1_arr1: ["cell", 2023, "brown"],
-  object1_func1: function(){
+  object1_func1: function () {
     console.log("Hey this is object1's function1.");
   },
   object1_func2() {
     console.log("Hey this is object1's function2.");
-  }
+  },
 };
 console.log("Object :", object1);
 // We can access individual properties using dot notation
@@ -975,7 +975,7 @@ console.log("Object's property : " + object2[object2_var1]);
 // ========================================================
 
 // We can create the another object inside the object
-object2.object2_1 = new Object;
+object2.object2_1 = new Object();
 object2.object2_1.product_name1 = "flight";
 object2.object2_1.product_model1 = 2015;
 object2.object2_1.product_color1 = "white";
@@ -990,13 +990,96 @@ console.log("Array inside object :", object2.object2_arr1);
 // ========================================================
 
 // We can write function inside the object
-object2.object2_func1 = function() {
-  console.log("Hey this is object2's function.");
-}
+object2.object2_func1 = function () {
+  console.log("Hey this is object2's function1.");
+};
 
-object2.object2_func2 = function() {
-  console.log("Hey this is object2's function.");
-}
+object2.object2_func2 = function () {
+  console.log("Hey this is object2's function2.");
+};
 object2.object2_func1();
 object2.object2_func2();
+// --------------------------------------------------------
+
+// Loops
+// (i) For loop						// In this loop initialization, condition and updation
+// Run only condition is true
+for (let for_loop_1 = 1; for_loop_1 < 6; for_loop_1++) {
+  console.log("for_loop_1 :", for_loop_1);
+}
+// ========================================================
+
+// (ii) While loop					// In this loop initialization before the loop block starts, condition in first line of the loop and then updation inside the loop block
+// Run only condition is true
+let while_loop_1 = 1;
+while (while_loop_1 < 6) {
+  console.log("while_loop_1 :", while_loop_1);
+  while_loop_1++;
+}
+// ========================================================
+
+// (iii) Do-while loop				// In this loop initialization before the loop block starts, updation is inside the loop block and then condition after outside the loop block
+// Run definitely once condition also false
+let do_while_loop_1 = 1;
+do {
+  console.log("do_while_loop_1 :", do_while_loop_1);
+  do_while_loop_1++;
+} while (do_while_loop_1 < 6);
+// --------------------------------------------------------
+
+// Break
+// This loop is run until user enter number
+while (true) {
+  let break_1 = Number(prompt("Enter the number :"));
+  if (!isNaN(break_1)) {
+    console.log("You entered :", break_1);
+    break;
+  }
+}
+// --------------------------------------------------------
+
+// Continue
+// This loop skip the particular execution
+let continue_1 = 0;
+while (true) {
+  continue_1++;
+  if (continue_1 === 3) {
+    continue;
+  }
+  console.log("continue_1 :", continue_1);
+  if (continue_1 === 5) {
+    break;
+  }
+}
+// --------------------------------------------------------
+
+// (iv) For-of loop				// This loop is used for array type datas
+let for_of_1 = ["hey", "hai", "how", "are", "you", "?"],
+  for_of_count_1 = 1;
+for (let for_of_2 of for_of_1) {
+  console.log(for_of_count_1 + ".for_of_1 : " + for_of_2);
+  for_of_count_1++;
+}
+// ========================================================
+
+// (v) For-in loop				// This loop is used for object type datas
+let for_in_1 = {
+    user_id: 34,
+    user_name: "Sara",
+    user_contact: 6302740270,
+    user_email: "sarasweety55@gmail.com",
+    user_job_role: "Developer",
+    user_experience: "3 years",
+  },
+  for_in_count_1 = 1;
+for (let for_in_property_1 in for_in_1) {
+  console.log(for_in_count_1 + ".for_in_1_property : " + for_in_property_1);
+  for_in_count_1++;
+}
+
+let for_in_count_2 = 1;
+for(let for_in_property_2 in for_in_1) {
+	console.log(for_in_count_2 + ".for_in_1_property's value : " + for_in_1[for_in_property_2]);
+	for_in_count_2++;
+}
 // --------------------------------------------------------
