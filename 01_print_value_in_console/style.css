@@ -1,3 +1,10 @@
+/* Universal resetting */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
 /* Hover effect added to text */
 .div_1 {
   overflow: hidden;
