@@ -56,14 +56,18 @@ COLOR_CODE_TEXT.addEventListener("click", function () {
 
   //   Set the original content
   setTimeout(function () {
+
+    // If the background color is white then run if part or else run else part
     if(color_code === null) {
       color_code = "#FFFFFF";
       COLOR_CODE_TEXT.textContent = color_code;
     COLOR_CODE_TEXT.style.color = "black";
     COLOR_CODE_TEXT.style.backgroundColor = color_code;
+    COLOR_CODE_TEXT.style.fontWeight = "bold";
     } else {
     COLOR_CODE_TEXT.textContent = color_code;
     COLOR_CODE_TEXT.style.color = color_code;
     COLOR_CODE_TEXT.style.backgroundColor = "white";
+    COLOR_CODE_TEXT.style.fontWeight = "bold"
 }}, 3000);
 });
