@@ -1,0 +1,96 @@
+/* Universal reset */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header_container {
+  display: flex;
+  height: 130px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Container's heading */
+.container_heading {
+  margin: 15px;
+}
+
+/* Color code */
+.color_code {
+  position: relative;
+  text-align: center;
+  height: 1.2em;
+  line-height: 1.2em;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.color_code::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  font-weight: normal;
+  font-size: 0.8em;
+  z-index: 999;
+  width: 100px;
+  border-radius: 10px;
+  padding-bottom: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  opacity: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100%;
+  transition: all 1s ease;
+}
+
+.color_code::after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  z-index: 998;
+  border: 5px solid transparent;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.color_code:hover::before, .color_code:hover::after {
+  opacity: 1;
+}
+
+/* Horizontal line */
+.horizontal_line {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+}
+
+/* Background color changing area */
+.bg_color_changing_container {
+  width: 100vw;
+  height: 78.5vh;
+  position: relative;
+}
+
+/* Button */
+.bg_color_change_button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  padding: 10px;
+  color: #adb2d4;
+  text-shadow: 2px -1px 2px black, 2px 1px 2px black;
+  font-weight: bold;
+  background-color: #eef1da;
+  border-radius: 5px;
+  letter-spacing: 5px;
+}
