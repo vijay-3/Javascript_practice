@@ -1,5 +1,7 @@
 // Get the elements for change color process
 
+/** @type {Element} */
+
 // Color code text area
 const COLOR_CODE_TEXT = document.getElementsByClassName("color_code")[0];
 
