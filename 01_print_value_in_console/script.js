@@ -1105,7 +1105,9 @@ console.log("Fuction declaration :", add(23, 9));
 console.log("Only function name : " + add);
 
 // We can call the function before the function code
-console.log("Function call before the function code : " + before_func_call("vijay"));
+console.log(
+  "Function call before the function code : " + before_func_call("vijay")
+);
 
 function before_func_call(before_call_name) {
   return "Hai you called me before my instruction " + before_call_name;
@@ -1116,7 +1118,9 @@ console.log("Function's type is : " + typeof before_func_call);
 
 // If we create the function without default values to the argument or parameter for function even use the parameter it will assigned the variable value as undefined
 function without_default_parameter(not_default_user_name) {
-  console.log("This is not default parameter's user name : " + not_default_user_name);
+  console.log(
+    "This is not default parameter's user name : " + not_default_user_name
+  );
 }
 
 // Call the function without argument or parameter
@@ -1124,7 +1128,9 @@ without_default_parameter();
 
 // We can create the function with default values to the argument or parameter for function then the function use that default value if user not give the parameter
 function with_default_parameter(default_user_name = "vijay") {
-  console.log("This is the default parameter's user name : " + default_user_name)
+  console.log(
+    "This is the default parameter's user name : " + default_user_name
+  );
 }
 
 // Call the function without argument or parameter
