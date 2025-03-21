@@ -1078,8 +1078,56 @@ for (let for_in_property_1 in for_in_1) {
 }
 
 let for_in_count_2 = 1;
-for(let for_in_property_2 in for_in_1) {
-	console.log(for_in_count_2 + ".for_in_1_property's value : " + for_in_1[for_in_property_2]);
-	for_in_count_2++;
+for (let for_in_property_2 in for_in_1) {
+  console.log(
+    for_in_count_2 +
+      ".for_in_1_property's value : " +
+      for_in_1[for_in_property_2]
+  );
+  for_in_count_2++;
 }
+// --------------------------------------------------------
+
+// Function
+// (i) Function declaration	 -  Hoisting only with this function declaration type
+// Hoisting means	-	We can use or call this function wherever in this file. Before or after the function code no issues or errors and also function work well.
+
+// function add (This area called parameter or argument)
+function add(decla_num1, decla_num2) {
+  return decla_num1 + decla_num2;
+}
+
+// Call the function
+// add(This area called argument or parameter)
+console.log("Fuction declaration :", add(23, 9));
+
+// If we use only function's name then it will return the function's code
+console.log("Only function name : " + add);
+
+// We can call the function before the function code
+console.log("Function call before the function code : " + before_func_call("vijay"));
+
+function before_func_call(before_call_name) {
+  return "Hai you called me before my instruction " + before_call_name;
+}
+
+// If we check the function's type that is also function
+console.log("Function's type is : " + typeof before_func_call);
+
+// If we create the function without default values to the argument or parameter for function even use the parameter it will assigned the variable value as undefined
+function without_default_parameter(not_default_user_name) {
+  console.log("This is not default parameter's user name : " + not_default_user_name);
+}
+
+// Call the function without argument or parameter
+without_default_parameter();
+
+// We can create the function with default values to the argument or parameter for function then the function use that default value if user not give the parameter
+function with_default_parameter(default_user_name = "vijay") {
+  console.log("This is the default parameter's user name : " + default_user_name)
+}
+
+// Call the function without argument or parameter
+with_default_parameter();
+// =======================================================
 // --------------------------------------------------------
