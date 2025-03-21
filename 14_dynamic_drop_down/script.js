@@ -19,10 +19,12 @@ function add_option() {
 add_option();
 
 // Create the display element for show the selected option
-
 const OUTPUT_ELEMENT = document.getElementsByClassName("output")[0];
+
 // Show the selected option
 COURSE_DROPDOWN.addEventListener("change", () => {
-  OUTPUT_ELEMENT.textContent = `Selected course is ${COURSE_DROPDOWN.options[COURSE_DROPDOWN.selectedIndex].value}`;
+  OUTPUT_ELEMENT.textContent = `Selected course is ${
+    COURSE_DROPDOWN.options[COURSE_DROPDOWN.selectedIndex].value
+  }`;
   console.log(COURSE_DROPDOWN.options[COURSE_DROPDOWN.selectedIndex].value);
 });

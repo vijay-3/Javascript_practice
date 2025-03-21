@@ -36,10 +36,6 @@
     font-weight: bold;
 }
 
-option:hover {
-    background-color: green;
-}
-
 /* Output message div */
 .output {
     position: absolute;
