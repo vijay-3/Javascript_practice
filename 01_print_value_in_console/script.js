@@ -1089,8 +1089,9 @@ for (let for_in_property_2 in for_in_1) {
 // --------------------------------------------------------
 
 // Function
-// (i) Function declaration	 -  Hoisting only with this function declaration type
+// (i) Function declaration	 -  Hoisting working only with this function declaration type
 // Hoisting means	-	We can use or call this function wherever in this file. Before or after the function code no issues or errors and also function work well.
+// Javascript's interpret moves this function to the top of the file.
 
 // function add (This area called parameter or argument)
 function add(decla_num1, decla_num2) {
@@ -1135,5 +1136,137 @@ function with_default_parameter(default_user_name = "vijay") {
 
 // Call the function without argument or parameter
 with_default_parameter();
-// =======================================================
+
+// Factorial function
+function factorial(facto_num) {
+  if (facto_num === 1) {
+    return 1;
+  } else {
+    return facto_num * factorial(facto_num - 1);
+  }
+}
+
+// Call the factorial function
+console.log("Factorial function :", factorial(5));
+// ========================================================
+
+// (ii) Function expression		- Hoisting doesn't work for this function type. So, we can only call this function after this function code
+const FUNC_EXPRE_MULTIPLE = function (func_expre_num1, func_expre_num2) {
+  return func_expre_num1 * func_expre_num2;
+};
+
+// Call the expression function
+console.log("Function expression :", FUNC_EXPRE_MULTIPLE(5, 8));
+// ========================================================
+
+// (iii) Arrow function			- Hoisting doesn't work for this function type. So, we can only call this function after thid function code
+// {len * brea * heigh}		- We can write code without return statement if the code only in single line
+const FUNC_ARROW_FIND_RECT_VOLUME = (len, brea, heigh) => {
+  return len * brea * heigh;
+};
+
+// Call the arrow function
+console.log("Arrow function :", FUNC_ARROW_FIND_RECT_VOLUME(4, 3, 9));
+
+// Sum the array elements and print by using arrow function
+const ARROW_ARR = [34, 98, 874, 20, 5];
+// const FUNC_ARROW_SUM_ARR_ELEMENT = arr_arro		- We can use the function argument or parameter without parentheses if the argument or parameter is single and also if no parameter or argument for the function then we must give the parentheses
+const FUNC_ARROW_SUM_ARR_ELEMENT = (arr_arro) => {
+  let arr_ele_sum = 0;
+  for (let arr_element of arr_arro) {
+    arr_ele_sum = arr_ele_sum + arr_element;
+  }
+  return arr_ele_sum;
+};
+
+// Call the sum of array element
+console.log("Sum of array element :", FUNC_ARROW_SUM_ARR_ELEMENT(ARROW_ARR));
+
+// Find the area of circle using arrow function
+const FUNC_ARROW_FIND_AREA_OF_CIRCLE = (circle_radius) =>
+  Math.PI * circle_radius ** 2;
+
+// Call the area of circle function
+console.log(
+  "Area of circle :",
+  Number(FUNC_ARROW_FIND_AREA_OF_CIRCLE(3).toFixed(3))
+);
+
+// We can pass dynamic arguments or parameters to function and get the all parameters or arguments using spread(...) operator
+const DYNAMIC_ARGUMENT_1 = function (...dyna_arr_1) {
+  let dyna_arr_1_ele_count = 0;
+  for (let dyna_arr_1_ele of dyna_arr_1) {
+    dyna_arr_1_ele_count++;
+    console.log(
+      `Dynamic array element 1 ${dyna_arr_1_ele_count}.`,
+      dyna_arr_1_ele
+    );
+  }
+};
+
+// Call the DYNAMIC_ARGUMENT_1
+DYNAMIC_ARGUMENT_1(4, 65, 0x9, 7, 1);
+
+// Here we get the multiple arguments or parameters and store the first element into the dyna_arr_2_first_ele
+const DYNAMIC_ARGUMENT_2 = function (dyna_arr_2_first_ele, ...dyna_arr_2) {
+  console.log(
+    "Dynamic array element 2's first element :",
+    dyna_arr_2_first_ele
+  );
+  for (let dyna_arr_2_ele of dyna_arr_2) {
+    console.log(
+      "Dynamic array element 2's element (without first element) :",
+      dyna_arr_2_ele
+    );
+  }
+};
+
+// Call the DYNAMIC_ARGUMENT_2
+DYNAMIC_ARGUMENT_2(23, 98, 67, 6, 2);
+
+// We can get the multiple arguments or parameters without spread(...) operator
+// Here the values are stored in arguments object
+const DYNAMIC_ARGUMENT_3 = function () {
+  for (let dyna_arr_3_ele of arguments) {
+    console.log(
+      "Dynamic element 3's without parameter or argument :",
+      dyna_arr_3_ele
+    );
+  }
+};
+
+// Call the DYNAMIC_ARGUMENT_3
+DYNAMIC_ARGUMENT_3(32, 9, 12, "hey", "u");
+// ========================================================
+
+// (iv) Generator function		- This function is work like an iterator it return a value like an object
+function* count_gener() {
+  let genra_count = 1;
+  while (true) {
+    yield genra_count++;
+  }
+}
+
+// Call the alphabet_gener function
+const FUNC_GENER_COUNT = count_gener();
+console.log("Generator function count :", FUNC_GENER_COUNT.next().value);
+console.log("Generator function count :", FUNC_GENER_COUNT.next().value);
+console.log("Generator function count :", FUNC_GENER_COUNT.next().value);
+console.log("Generator function count :", FUNC_GENER_COUNT.next().value);
+
+// Alphabet generate using generator function
+function *alpha_gener() {
+  let genera_alpha = "a".charCodeAt(0);
+  while (genera_alpha <= "z".charCodeAt(0)) {
+    yield String.fromCharCode(genera_alpha++);
+  }
+}
+
+// Call the alpha_genr function
+const GEN_ALPHA = alpha_gener();
+console.log("Generator function alphabet : " + GEN_ALPHA.next().value);
+console.log("Generator function alphabet : " + GEN_ALPHA.next().value);
+console.log("Generator function alphabet : " + GEN_ALPHA.next().value);
+console.log("Generator function alphabet : " + GEN_ALPHA.next().value);
+console.log("Generator function alphabet : " + GEN_ALPHA.next().value);
 // --------------------------------------------------------
