@@ -1255,7 +1255,7 @@ console.log("Generator function count :", FUNC_GENER_COUNT.next().value);
 console.log("Generator function count :", FUNC_GENER_COUNT.next().value);
 
 // Alphabet generate using generator function
-function *alpha_gener() {
+function* alpha_gener() {
   let genera_alpha = "a".charCodeAt(0);
   while (genera_alpha <= "z".charCodeAt(0)) {
     yield String.fromCharCode(genera_alpha++);
