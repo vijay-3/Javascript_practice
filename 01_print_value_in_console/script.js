@@ -1270,3 +1270,26 @@ console.log("Generator function alphabet : " + GEN_ALPHA.next().value);
 console.log("Generator function alphabet : " + GEN_ALPHA.next().value);
 console.log("Generator function alphabet : " + GEN_ALPHA.next().value);
 // --------------------------------------------------------
+
+// Callback		-	This callback means pass the function as an argument or parameter to function
+// Main callback function
+function callback_func_1(usr_message) {
+  console.log(usr_message);
+}
+
+// Here get the Main callback function name and user message
+function callback_func_2(call_func, usr_mess) {
+  call_func(usr_mess);
+}
+
+// Here send the function name and message as an argument or parameter
+function callback_func_3() {
+  callback_func_2(
+    callback_func_1,
+    "Hey, this callback_func_1 function called from callback_func_3 function used by callback_func_2 function.\n"
+  );
+}
+
+// Call the callback_func_3
+callback_func_3();
+// --------------------------------------------------------
