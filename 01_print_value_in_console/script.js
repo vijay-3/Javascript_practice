@@ -1271,7 +1271,8 @@ console.log("Generator function alphabet : " + GEN_ALPHA.next().value);
 console.log("Generator function alphabet : " + GEN_ALPHA.next().value);
 // --------------------------------------------------------
 
-// Callback		-	This callback means pass the function as an argument or parameter to function
+// Callback function
+// This callback means pass the function as an argument or parameter to function
 // Main callback function
 function callback_func_1(usr_message) {
   console.log(usr_message);
@@ -1292,4 +1293,44 @@ function callback_func_3() {
 
 // Call the callback_func_3
 callback_func_3();
+// --------------------------------------------------------
+
+// Foreach method
+// This method get the element from the array and send the element one by one to function inside the foreach object's parameter or argument
+const FORE_ARR_1 = ["Hey,", "this", "is", "forEach", "method."];
+
+// Send the FORE_ARR_1 elements to the for_ea_func function using by forEach method
+FORE_ARR_1.forEach(for_ea_func);
+
+// Print the array elements sent from forEach method
+function for_ea_func(for_ea_ele_1) {
+  console.log("Array element_1 from forEach : " + for_ea_ele_1);
+}
+
+// We can also write the code inside the forEach's argument or parameter
+const FORE_ARR_2 = ["Hi", "this", "is", "also", "forEach", "method."];
+
+// Print the array elements using forEach method by arrow function
+FORE_ARR_2.forEach((for_ea_ele_2) =>
+  console.log("Array element_2 from forEach : " + for_ea_ele_2)
+);
+
+// We can also change the value inside the array using forEach method
+// In forEach method we can send upto 3 arguments or parameters that first one is array element, second one is index of the array element and third one is array
+const FORE_ARR_3 = ["Hey", "this", "is", "smaller", "case."];
+
+// Print the array elements before change the array elements
+FORE_ARR_3.forEach((for_ea_ele_3) =>
+  console.log("Array element_3 from forEach before change : " + for_ea_ele_3)
+);
+
+// Change the array elements
+FORE_ARR_3.forEach((for_ea_ele_4, arr_elem_index, forea_arr_1) => {
+  forea_arr_1[arr_elem_index] = for_ea_ele_4.toUpperCase();
+});
+
+// Print the array elements after changed the array elements
+FORE_ARR_3.forEach((for_ea_ele_5) =>
+  console.log("Array element_3 from forEach after change : " + for_ea_ele_5)
+);
 // --------------------------------------------------------
