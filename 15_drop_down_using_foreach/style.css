@@ -1,0 +1,70 @@
+/* Universe style reset */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* Center the elements */
+.main_container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* Those three containers */
+.first_container,
+.second_container,
+.third_container {
+  width: 33.3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Position the heading */
+.container_heading {
+  position: absolute;
+  width: 22.3vw;
+  top: 10%;
+}
+
+/* Drop down */
+#course_name_1,
+#course_name_2,
+#sum_of_num {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px;
+  appearance: none;
+  border-radius: 5px;
+  cursor: pointer;
+  top: 45%;
+  position: absolute;
+}
+
+/* Calculate button */
+.calc_button {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  top: 65%;
+  position: absolute;
+}
+
+/* Display area */
+.output_area_1,
+.output_area_2,
+.output_area_3 {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+  top: 80%;
+}
