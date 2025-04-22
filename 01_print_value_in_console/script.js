@@ -1296,7 +1296,7 @@ callback_func_3();
 // --------------------------------------------------------
 
 // Foreach method
-// This method get the element from the array and send the element one by one to function inside the foreach object's parameter or argument
+// This method get the element from the array and send the element one by one to function inside the foreach object's parameter or argument but this is not create new array implicitly
 const FORE_ARR_1 = ["Hey,", "this", "is", "forEach", "method."];
 
 // Send the FORE_ARR_1 elements to the for_ea_func function using by forEach method
@@ -1333,4 +1333,129 @@ FORE_ARR_3.forEach((for_ea_ele_4, arr_elem_index, forea_arr_1) => {
 FORE_ARR_3.forEach((for_ea_ele_5) =>
   console.log("Array element_3 from forEach after change : " + for_ea_ele_5)
 );
+// --------------------------------------------------------
+
+// Map method
+// This method is work like a For Each method but this is create the new array and in this method we use method the array variable for store the newly created array by map method
+const MAP_ARR_1 = [3, 4, 43, 9, 4];
+
+console.log("Before the map method using original array1 :", MAP_ARR_1);
+
+// We can use arrow function for map method
+const MAP_ARR_1_1 = MAP_ARR_1.map((map_arr_1_ele) => map_arr_1_ele + 1);
+console.log("After the map method created new array1 :", MAP_ARR_1_1);
+
+// We can also use the function for the map method
+const MAP_ARR_2 = [23, 97, 43, 87, 98, 67];
+
+console.log("Before the map method using original array2 :", MAP_ARR_2);
+
+const MAP_ARR_2_CHANGE_FUNC = function (map_arr_2_ele) {
+  if (map_arr_2_ele < 100) {
+    while (1) {
+      map_arr_2_ele++;
+      if (map_arr_2_ele === 100) {
+        break;
+      }
+    }
+  } else if (map_arr_2_ele > 100) {
+    while (1) {
+      map_arr_2_ele--;
+      if (map_arr_2_ele === 100) {
+        break;
+      }
+    }
+  }
+  return map_arr_2_ele;
+};
+
+const MAP_ARR_2_1 = MAP_ARR_2.map(MAP_ARR_2_CHANGE_FUNC);
+
+console.log("After the map method using using original array2 :", MAP_ARR_2_1);
+// --------------------------------------------------------
+
+// Filter method
+// This method work like a map method but this method work based on particular condition
+const FILTER_ARR_1 = [23, 78, 24, 87, 89];
+
+console.log("Before the filter method used on original array1 :", FILTER_ARR_1);
+
+const FILTER_ARR_1_1 = FILTER_ARR_1.filter(
+  (filter_arr_1_ele) =>
+    // if(filter_arr_1_ele > 50) {
+    //   return filter_arr_1_ele;
+    // }
+    filter_arr_1_ele > 50
+);
+
+console.log(
+  "After the filter method used on original array1 and remove the less than 50 :",
+  FILTER_ARR_1_1
+);
+
+// We can use the function for the filter method
+const FILTER_ARR_2 = [298, 3487, 239, 9238, 39, 676, 768];
+
+console.log("Before the filter method used on original array2 :", FILTER_ARR_2);
+
+const FILTER_ARR_2_1 = FILTER_ARR_2.filter(FILTER_ARR_2_CHANGE_FUNC);
+
+function FILTER_ARR_2_CHANGE_FUNC(filter_arr_2_ele) {
+  return filter_arr_2_ele < 1000;
+}
+
+console.log(
+  "After the filter method used on original array2 and removed the greater than 1000 :",
+  FILTER_ARR_2_1
+);
+// --------------------------------------------------------
+
+// Reduce method
+// This method is used to shrink the multiple values to single value
+// This method generate the single value from multiple value
+const REDUCE_ARR_1 = [34, 24, 98, 87, 45];
+
+console.log("Before the reduce method used on original array1 :", REDUCE_ARR_1);
+
+// Here the reduce method contains minimum two parameters first one is contains calculation's total value and then second parameter is contains the array value one by one
+// And also first parameter contain the first element of the array by default and second parameter collect from the second element
+const REDUCE_ARR_1_1 = REDUCE_ARR_1.reduce(
+  (reduce_arr_1_total, reduce_arr_1_ele) =>
+    reduce_arr_1_total + reduce_arr_1_ele
+);
+
+console.log(
+  "After the reduce method used on original array1 :",
+  REDUCE_ARR_1_1
+);
+
+// We can also give the starting value by dynamically after the function
+const REDUCE_ARR_1_2 = REDUCE_ARR_1.reduce(
+  (reduce_arr_1_total_1, reduce_arr_1_ele_1) =>
+    reduce_arr_1_total_1 + reduce_arr_1_ele_1,
+  100
+);
+
+console.log(
+  "After the reduce method used on original array1 and initial value dynamically add as a 100 :",
+  REDUCE_ARR_1_2
+);
+
+// We can count the number of duplicates in given array using reduce method and also use the function
+const REDUCE_ARR_2 = [31, 98, "s", 89, "a", 8, "a", 98];
+console.log("Array with duplicate value :", REDUCE_ARR_2);
+
+const REDUCE_ARR_2_1 = REDUCE_ARR_2.reduce(REDUCE_COUNT_DUP);
+
+// Here this function calculate the duplicate of the array element
+// And also here this reduce method not creatre the single value instead of create the object and also if we want array we can create
+function REDUCE_COUNT_DUP(reduce_arr_2_total_1, reduce_arr_2_ele_1) {
+  if (reduce_arr_2_total_1[reduce_arr_2_ele_1]) {
+    reduce_arr_2_total_1[reduce_arr_2_ele_1]++;
+  } else {
+    reduce_arr_2_total_1[reduce_arr_2_ele_1] = 1;
+  }
+  return reduce_arr_2_total_1;
+}
+console.log("Count of the array element using reduce method :", REDUCE_ARR_2_1);
 // --------------------------------------------------------
