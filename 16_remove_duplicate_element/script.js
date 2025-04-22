@@ -15,9 +15,8 @@ const CLONED_BREAK = document
 const ARRAY_QUEST_AREA = document.createElement("h2");
 ARRAY_QUEST_AREA.className = "array_quest";
 PARENT_AREA.appendChild(ARRAY_QUEST_AREA);
-const ARRAY_QUEST_ELEMENT = document.getElementsByClassName("array_quest")[0];
 const ARRAY = [4, 6, 2, 3, 1, 1, 3, 5, 7, 8, 4, 3];
-ARRAY_QUEST_ELEMENT.textContent = `Array : [${ARRAY}]`;
+ARRAY_QUEST_AREA.textContent = `Array : [${ARRAY}]`;
 
 // Add the break tag
 PARENT_AREA.appendChild(CLONED_BREAK);
