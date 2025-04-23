@@ -17,7 +17,6 @@ PARENT_AREA.appendChild(CLONED_BREAK_1);
 
 // Sum the positive numbers from array using filter method
 const SUM_OF_POSITIVE_NUMBERS = ARRAY.filter(array_ele => array_ele >= 0).reduce(((sum_of_posi_num, positive_num) => sum_of_posi_num + positive_num), 0);
-console.log(SUM_OF_POSITIVE_NUMBERS);
 
 // Clone the question heading tag for answer label and add the tag after the break tag
 const CLONED_ANS_LABEL = QUEST_ARRAY_ELEMENT.cloneNode(false);
