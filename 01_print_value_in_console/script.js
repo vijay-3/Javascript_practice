@@ -12,8 +12,8 @@ var weight = 44;
 weight = 33;
 console.log("The weight is", weight);
 // --------------------------------------------------------
-// Arithmetic operators -    +  -  *  **  /  %  ++  --
 
+// Arithmetic operators -    +  -  *  **  /  %  ++  --
 // (i) Addition  +
 let add_num1 = 44;
 let add_num2 = 23;
