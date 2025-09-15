@@ -1371,7 +1371,7 @@ const MAP_ARR_2_CHANGE_FUNC = function (map_arr_2_ele) {
 
 const MAP_ARR_2_1 = MAP_ARR_2.map(MAP_ARR_2_CHANGE_FUNC);
 
-console.log("After the map method using using original array2 :", MAP_ARR_2_1);
+console.log("After the map method using original array2 :", MAP_ARR_2_1);
 // --------------------------------------------------------
 
 // Filter method
@@ -1445,10 +1445,10 @@ console.log(
 const REDUCE_ARR_2 = [31, 98, "s", 89, "a", 8, "a", 98];
 console.log("Array with duplicate value :", REDUCE_ARR_2);
 
-const REDUCE_ARR_2_1 = REDUCE_ARR_2.reduce(REDUCE_COUNT_DUP);
+const REDUCE_ARR_2_1 = REDUCE_ARR_2.reduce(REDUCE_COUNT_DUP, {});
 
 // Here this function calculate the duplicate of the array element
-// And also here this reduce method not creatre the single value instead of create the object and also if we want array we can create
+// And also here this reduce method not create the single value instead of create the object and also if we want array we can create
 function REDUCE_COUNT_DUP(reduce_arr_2_total_1, reduce_arr_2_ele_1) {
   if (reduce_arr_2_total_1[reduce_arr_2_ele_1]) {
     reduce_arr_2_total_1[reduce_arr_2_ele_1]++;
@@ -1458,4 +1458,6 @@ function REDUCE_COUNT_DUP(reduce_arr_2_total_1, reduce_arr_2_ele_1) {
   return reduce_arr_2_total_1;
 }
 console.log("Count of the array element using reduce method :", REDUCE_ARR_2_1);
+
+//
 // --------------------------------------------------------
