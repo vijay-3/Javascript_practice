@@ -1413,6 +1413,7 @@ console.log(
 // Reduce method
 // This method is used to shrink the multiple values to single value
 // This method generate the single value from multiple value
+// We should give the initial value to the return value after the callback function
 const REDUCE_ARR_1 = [34, 24, 98, 87, 45];
 
 console.log("Before the reduce method used on original array1 :", REDUCE_ARR_1);
@@ -1459,5 +1460,75 @@ function REDUCE_COUNT_DUP(reduce_arr_2_total_1, reduce_arr_2_ele_1) {
 }
 console.log("Count of the array element using reduce method :", REDUCE_ARR_2_1);
 
-//
+// We can also use the reduce method to combine the array of the string
+const REDUCE_ARR_3 = [
+  "This",
+  "sentence",
+  "is",
+  "combined",
+  "from",
+  "array",
+  "using",
+  "reduce",
+  "method",
+  "and",
+  "also",
+  "that",
+  "reduce",
+  "method",
+  "called",
+  "the",
+  "callback",
+  "function",
+  "as",
+  "a",
+  "function",
+  "parameter",
+];
+
+// Function create the sentence from array
+function COMBINE_WORD(reduce_arr_3_total_1, reduce_arr_3_ele_1) {
+  return reduce_arr_3_total_1 += reduce_arr_3_ele_1 + " ";
+}
+
+// Function for check the string have ending symbol at the end of the string
+function CHECK_END_CHARACTER() {
+  const REDUCE_ARR_3_SENTENCE_1 = REDUCE_ARR_3.reduce(COMBINE_WORD, "").trim();
+  if (
+    /[.?!]$/.test(REDUCE_ARR_3_SENTENCE_1) ||
+    REDUCE_ARR_3_SENTENCE_1.endsWith("...")
+  ) {
+    return REDUCE_ARR_3_SENTENCE_1;
+  } else {
+    return REDUCE_ARR_3_SENTENCE_1 + ".";
+  }
+}
+
+console.log(
+  "Create the sentence from array elements using reduce method : " +
+    CHECK_END_CHARACTER()
+);
+
+// We can add the unique positive numbers
+const REDUCE_ARR_4 = ["i", "7", 6, -4, 0, 5, 8, "8", 5, 1, 6];
+
+console.log("Array with duplicate before the reduce method :", REDUCE_ARR_4);
+
+// Here this function add the unique positive numbers
+const REDUCE_ARR_4_1 = REDUCE_ARR_4.reduce(
+  (reduce_arr_4_total_1, reduce_arr_4_ele_1, reduce_arr_4_index_1) => {
+    if (typeof reduce_arr_4_ele_1 === "number" && reduce_arr_4_ele_1 >= 0) {
+      if (REDUCE_ARR_4.indexOf(reduce_arr_4_ele_1) === reduce_arr_4_index_1) {
+        reduce_arr_4_total_1 += reduce_arr_4_ele_1;
+      }
+    }
+    return reduce_arr_4_total_1;
+  },
+  0
+);
+
+console.log(
+  "Sum of unique positive numbers using reduce method :",
+  REDUCE_ARR_4_1
+);
 // --------------------------------------------------------
