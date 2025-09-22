@@ -43,7 +43,8 @@ SUBMIT_BUTTON.addEventListener("submit", function (event) {
     unit_250_above = user_unit - 250;
     unit_250_above = unit_250_above * 1.5;
   }
-  //   Here the output
+  
+  // Here the output
   eb_cost = unit_50 + unit_150 + unit_250 + unit_250_above;
   OUTPUT[0].innerHTML = eb_cost.toFixed(2);
 });
