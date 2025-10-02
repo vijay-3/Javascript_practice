@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano" width="1200" height="1200" viewBox="0 0 317.5 317.5">
+  <g transform="matrix(1.406409 0 0 1.406409 22.822636 90.092206)" stroke="#247ba0" fill="none" stroke-linejoin="round" stroke-width="2.822">
+    <rect width="51.765" height="70.286" x="132.868" y="47.625" rx="4.706" paint-order="fill markers stroke"></rect>
+    <rect width="42.776" height="13.229" x="137.583" y="52.917" rx="2.646" paint-order="fill markers stroke"></rect>
+    <rect width="10.583" height="10.583" x="137.583" y="74.083" rx="2.646" paint-order="fill markers stroke"></rect>
+    <rect width="10.583" height="10.583" x="153.458" y="74.083" rx="2.646" paint-order="fill markers stroke"></rect>
+    <rect width="10.583" height="10.583" x="169.333" y="74.083" rx="2.646" paint-order="fill markers stroke"></rect>
+    <rect width="10.583" height="10.583" x="137.583" y="88.724" rx="2.646" paint-order="fill markers stroke"></rect>
+    <rect width="10.583" height="10.583" x="153.458" y="88.724" rx="2.646" paint-order="fill markers stroke"></rect>
+    <rect width="9.599" height="24.555" x="169.826" y="89.216" rx="2.646" paint-order="fill markers stroke"></rect>
+    <rect width="10.583" height="10.583" x="137.583" y="103.188" rx="2.646" paint-order="fill markers stroke"></rect>
+    <rect width="10.583" height="10.583" x="153.458" y="103.188" rx="2.646" paint-order="fill markers stroke"></rect>
+  </g>
+  <path d="M179.917 47.625L95.25 179.917h63.5l-21.167 89.958 84.667-132.292h-63.5l21.167-89.958z" fill="none" stroke="#1d3461" stroke-width="13.229" stroke-linejoin="round"></path>
+</svg>
