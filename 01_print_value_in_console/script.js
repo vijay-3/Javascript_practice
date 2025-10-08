@@ -1488,7 +1488,7 @@ const REDUCE_ARR_3 = [
 
 // Function create the sentence from array
 function COMBINE_WORD(reduce_arr_3_total_1, reduce_arr_3_ele_1) {
-  return reduce_arr_3_total_1 += reduce_arr_3_ele_1 + " ";
+  return (reduce_arr_3_total_1 += reduce_arr_3_ele_1 + " ");
 }
 
 // Function for check the string have ending symbol at the end of the string
