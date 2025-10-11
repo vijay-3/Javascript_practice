@@ -1532,3 +1532,94 @@ console.log(
   REDUCE_ARR_4_1
 );
 // --------------------------------------------------------
+
+// Closure
+// The children functions remember the value of parent functions's also after the parent functions's execution. This is called Closures
+// We can write the multiple functions inside the function and those nested function can access the that's parent's values
+function closure_outer_func_1() {
+  let closure_outer_func_1_ele_1 = "outer function_1's string.";
+  function closure_inner_func_1() {
+    let closure_inner_func_1_ele_1 = "inner function_1's string.";
+    console.log(
+      "Access the outer function_1's value from inner function : " +
+        closure_outer_func_1_ele_1
+    );
+    console.log(
+      "Access the inner function_1's value from inner function : " +
+        closure_inner_func_1_ele_1
+    );
+  }
+
+  // We should call the inner function_1 in outer function_1's scope. Because of we can't call the inner function_1 outside the outer function_1
+  closure_inner_func_1();
+}
+
+// Here we call the closure_outer_func_1
+closure_outer_func_1();
+
+// We can access the inner function outside the outer function for that we should return the inner function from outer function so we can access the inner function from outside the outer function
+function closure_outer_func_2() {
+  let closure_outer_func_2_ele_1 = "outer function_2's string.";
+  function closure_inner_func_2() {
+    let closure_inner_func_2_ele_1 = "inner function_2's string.";
+    console.log(
+      "Access the outer function's value from inner function : " +
+        closure_outer_func_2_ele_1
+    );
+    console.log(
+      "Access the inner function's value from outer function : " +
+        closure_inner_func_2_ele_1
+    );
+  }
+
+  // Here return the closure_inner_func_2 for access from outside of the closure_outer_func_2
+  return closure_inner_func_2;
+}
+
+// Here we call that closure_outer_func_2 and store the returning value in variable because of that closure_outer_func_2 return a closure_inner_func_2 function
+let closure_outer_func_2_var_1 = closure_outer_func_2();
+
+// And then we can call the closure_inner_func_2 function using closure_outer_func_2_var_1 variable because of it contains the closure_inner_func_2 function
+closure_outer_func_2_var_1();
+
+// We can also give the parameter to the outer function and then access from inner function
+function closure_outer_func_3(closure_outer_func_3_param_1) {
+  function closure_inner_func_3() {
+    console.log(
+      "Access the outer function's parameter : " + closure_outer_func_3_param_1
+    );
+  }
+
+  // Here return the clousure_inner_func_3 for access from outside of the closure_outer_func_3
+  return closure_inner_func_3;
+}
+
+// Here we call that closure_outer_func_3 and store the returning value in variable because of that closure_outer_func_3 return the closure_inner_func_3
+let closure_outer_func_3_var_1 = closure_outer_func_3(
+  "outer function's parameter."
+);
+
+// And then we can call the closure_inner_func_3 function using closure_outer_func_3_var_1 variable because of it contains the closure_inner_func_3 function
+closure_outer_func_3_var_1();
+
+// This closure feature also contain the value statically
+function closure_outer_func_4() {
+  let closure_outer_func_4_ele_1 = 4;
+  function closure_inner_func_4() {
+    console.log("Keep the value as statically :", closure_outer_func_4_ele_1++);
+  }
+
+  // Here return the clousure_inner_func_4 for access from outside of the closure_outer_func_4
+  return closure_inner_func_4;
+}
+
+// Here we call that closure_outer_func_4 and store the returning value in variable because of that closure_outer_func_4 return the closure_inner_func_4
+let closure_outer_func_4_var_1 = closure_outer_func_4();
+
+// And then we can call the closure_inner_func_4 function using closure_outer_func_4_var_1 variable because of it contains the closure_inner_func_4 function
+// And also keep the value changes statically
+closure_outer_func_4_var_1();
+closure_outer_func_4_var_1();
+closure_outer_func_4_var_1();
+closure_outer_func_4_var_1();
+// --------------------------------------------------------
