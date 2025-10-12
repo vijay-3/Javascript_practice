@@ -302,7 +302,7 @@ let hello_world = document.getElementById("h2_1");
 hello_world.innerHTML = "Hey Hai";
 // --------------------------------------------------------
 
-// Maths obect
+// Maths object
 // Functions are must used with parentheses - ()
 // (i) Round function			This is used for change the decimal point number to whole number by mathematical rules
 console.log("Math.round :", Math.round(4.0));
@@ -1605,12 +1605,11 @@ closure_outer_func_3_var_1();
 // This closure feature also contain the value statically
 function closure_outer_func_4() {
   let closure_outer_func_4_ele_1 = 4;
-  function closure_inner_func_4() {
+
+  // Here return the clousure_inner_func_4 for access from outside of the closure_outer_func_4 and also we can write the function in return statement line we don't need to return the function separately
+  return function closure_inner_func_4() {
     console.log("Keep the value as statically :", closure_outer_func_4_ele_1++);
   }
-
-  // Here return the clousure_inner_func_4 for access from outside of the closure_outer_func_4
-  return closure_inner_func_4;
 }
 
 // Here we call that closure_outer_func_4 and store the returning value in variable because of that closure_outer_func_4 return the closure_inner_func_4
@@ -1622,4 +1621,49 @@ closure_outer_func_4_var_1();
 closure_outer_func_4_var_1();
 closure_outer_func_4_var_1();
 closure_outer_func_4_var_1();
+
+// We can create a flexible function for multiple similar tasks
+// We can also write an N number of nested function
+function closure_outer_func_5(closure_outer_func_5_ele_1) {
+  return function closure_inner_func_5(closure_inner_func_5_ele_1) {
+    return closure_outer_func_5_ele_1 + closure_inner_func_5_ele_1;
+  }
+}
+
+// Here we call the closure_outer_func_5 function that will return the closure_inner_func_5_ele_1 function's value not a function or itself so we store that in variable
+// First argument go to closure_outer_func_5's parameter and second argument go to closure_inner_func_5's argument
+// And also we should give arguments separately because of separate function
+let closure_outer_func_5_var_1 = closure_outer_func_5(8)(5);
+console.log("Add two numbers using nested functions :", closure_outer_func_5_var_1);
+
+// We can also give the arguments separately for each function
+function closure_outer_func_6(closure_outer_func_6_ele_1) {
+  return function closure_inner_func_6(closure_inner_func_6_ele_1) {
+    return closure_outer_func_6_ele_1 + closure_inner_func_6_ele_1;
+  }
+}
+
+// Here we can give arguments separately
+// First argument go to closure_outer_func_6's parameter
+// Here we give the first argument as 9
+// Ṭhis variable keeps the 9 as a first argument always if we call whenever it will add 9 and another number that is given by second argument
+let closure_outer_func_6_var_1 = closure_outer_func_6(9);
+
+// This second go to closure_inner_func_6's parameter
+// Here we give the second argument as 78
+console.log("Here add the 78 with 9 using nested function :", closure_outer_func_6_var_1(78));
+
+// Here we give the second argument as 37
+console.log("Here add the 37 with 9 using nested function :", closure_outer_func_6_var_1(37));
+
+// Here we can also create new first argument value without change the existing first argument using new variable
+// Here we give the first argument as 3
+// This variable keeps the 3 as a first argument always if we will whenever it will add 3 and another number that is given by second argument
+let closure_outer_func_6_var_2 = closure_outer_func_6(3);
+
+// Here we give the second argument as 42
+console.log("Here add the 42 with 3 using nested function :", closure_outer_func_6_var_2(42));
+
+// Here we give the second argument as 65
+console.log("Here add the 65 with 3 using nested function :", closure_outer_func_6_var_2(65));
 // --------------------------------------------------------
