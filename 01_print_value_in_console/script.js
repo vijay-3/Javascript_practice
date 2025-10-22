@@ -1609,7 +1609,7 @@ function closure_outer_func_4() {
   // Here return the clousure_inner_func_4 for access from outside of the closure_outer_func_4 and also we can write the function in return statement line we don't need to return the function separately
   return function closure_inner_func_4() {
     console.log("Keep the value as statically :", closure_outer_func_4_ele_1++);
-  }
+  };
 }
 
 // Here we call that closure_outer_func_4 and store the returning value in variable because of that closure_outer_func_4 return the closure_inner_func_4
@@ -1627,20 +1627,23 @@ closure_outer_func_4_var_1();
 function closure_outer_func_5(closure_outer_func_5_ele_1) {
   return function closure_inner_func_5(closure_inner_func_5_ele_1) {
     return closure_outer_func_5_ele_1 + closure_inner_func_5_ele_1;
-  }
+  };
 }
 
 // Here we call the closure_outer_func_5 function that will return the closure_inner_func_5_ele_1 function's value not a function or itself so we store that in variable
 // First argument go to closure_outer_func_5's parameter and second argument go to closure_inner_func_5's argument
 // And also we should give arguments separately because of separate function
 let closure_outer_func_5_var_1 = closure_outer_func_5(8)(5);
-console.log("Add two numbers using nested functions :", closure_outer_func_5_var_1);
+console.log(
+  "Add two numbers using nested functions :",
+  closure_outer_func_5_var_1
+);
 
 // We can also give the arguments separately for each function
 function closure_outer_func_6(closure_outer_func_6_ele_1) {
   return function closure_inner_func_6(closure_inner_func_6_ele_1) {
     return closure_outer_func_6_ele_1 + closure_inner_func_6_ele_1;
-  }
+  };
 }
 
 // Here we can give arguments separately
@@ -1651,10 +1654,16 @@ let closure_outer_func_6_var_1 = closure_outer_func_6(9);
 
 // This second go to closure_inner_func_6's parameter
 // Here we give the second argument as 78
-console.log("Here add the 78 with 9 using nested function :", closure_outer_func_6_var_1(78));
+console.log(
+  "Here add the 78 with 9 using nested function :",
+  closure_outer_func_6_var_1(78)
+);
 
 // Here we give the second argument as 37
-console.log("Here add the 37 with 9 using nested function :", closure_outer_func_6_var_1(37));
+console.log(
+  "Here add the 37 with 9 using nested function :",
+  closure_outer_func_6_var_1(37)
+);
 
 // Here we can also create new first argument value without change the existing first argument using new variable
 // Here we give the first argument as 3
@@ -1662,8 +1671,144 @@ console.log("Here add the 37 with 9 using nested function :", closure_outer_func
 let closure_outer_func_6_var_2 = closure_outer_func_6(3);
 
 // Here we give the second argument as 42
-console.log("Here add the 42 with 3 using nested function :", closure_outer_func_6_var_2(42));
+console.log(
+  "Here add the 42 with 3 using nested function :",
+  closure_outer_func_6_var_2(42)
+);
 
 // Here we give the second argument as 65
-console.log("Here add the 65 with 3 using nested function :", closure_outer_func_6_var_2(65));
+console.log(
+  "Here add the 65 with 3 using nested function :",
+  closure_outer_func_6_var_2(65)
+);
+// --------------------------------------------------------
+
+// Memory Management
+// 1. Primitive Data Type - String, NUmber, BigInt, Boolean, Undefined, Null, Symbol
+// If we assign the one variable to another variable then assign the value to the variable not share the memory
+// This data type is stored in stack memory
+let primitive_data_type_num_1 = 69;
+
+// Now we assign the primitive_data_type_num_1 value to the primitive_data_type_num_2
+let primitive_data_type_num_2 = primitive_data_type_num_1;
+
+console.log(
+  "Primitive data type first variable value :",
+  primitive_data_type_num_1
+);
+console.log(
+  "Primitive data type second variable value :",
+  primitive_data_type_num_2
+);
+
+// Now we change the primitive_data_type_num_2 value
+primitive_data_type_num_2 = 38;
+
+// Only changed primitive_data_type_num_2 variable value not change in primitive_data_type_num_1 variable value
+console.log(
+  "After change the primitive data type second variable value, primitive data type first variable value :",
+  primitive_data_type_num_1
+);
+console.log(
+  "After change the primitive data type second variable value, primitive data type second variable value :",
+  primitive_data_type_num_2
+);
+// ========================================================
+
+// 2. Non-Primitive Data Type - Object, Array, Function, Date, RegExp, Map, Set, WeakMap, WeakSet
+// If we assign the one variable to another variable then assign the value and that value stored memory reference. So these two variables share the same memory
+// This is data is stored the value in heap memory and that value's reference stored in stack memory
+let non_primitive_data_type_obj_1 = {
+  non_primitive_usr_name_1: "Kong",
+  non_primitive_usr_age_1: 10,
+};
+let non_primitive_data_type_obj_2 = non_primitive_data_type_obj_1;
+
+console.log(
+  "Non primitive data type first variable value :",
+  non_primitive_data_type_obj_1
+);
+console.log(
+  "Non primitive data type second variable value :",
+  non_primitive_data_type_obj_2
+);
+
+// Now we change the non_primitive_data_type_obj_2 value only not key so keep the same memory
+non_primitive_data_type_obj_2.non_primitive_usr_name_1 = "Naomi";
+non_primitive_data_type_obj_2.non_primitive_usr_age_1 = 25;
+
+// Here both variables value changed
+console.log(
+  "After changed the Non primitive data type second variable value, non primitive data type first variable value :",
+  non_primitive_data_type_obj_1
+);
+console.log(
+  "After changed the Non primitive data type second variable value, non primitive data type second variable value :",
+  non_primitive_data_type_obj_2
+);
+// --------------------------------------------------------
+
+// Set Object
+// This is create the set object with unique values remove the repeated values and also it will return as Set object format
+let set_arr_1 = [1, 3, 4, 3, 9, 3, 9, 1];
+let set_obj_1 = new Set(set_arr_1);
+console.log("Removed the repeated values using Set object :", set_obj_1);
+
+// We can also give the value one by one
+let set_obj_2 = new Set();
+set_obj_2.add(4);
+set_obj_2.add(2);
+set_obj_2.add(6);
+set_obj_2.add("How");
+set_obj_2.add(4);
+set_obj_2.add(6);
+set_obj_2.add([8, 7]);
+console.log("Removed the repeated values using Set object :", set_obj_2);
+
+// It is strictly work on primitive data type but little liberally work on non primitive data type because non primitive data type reference type so each value stored in individual memory address So it different from the each one
+let set_obj_3 = new Set();
+set_obj_3.add(3);
+set_obj_3.add(2);
+set_obj_3.add(8);
+set_obj_3.add(2);
+
+// These below two stored in different memory address so it's not unique for JavaScript
+set_obj_3.add([5, 3]);
+set_obj_3.add([5, 3]);
+console.log("Removed the repeated value using Set object :", set_obj_3);
+
+// If we store the value in variable and until we use same variable for same value then Set object don't add the same value in set collection when work on non primitive data type
+let set_obj_4 = new Set();
+
+// Create the variable for non primitive data type
+let set_arr_2 = [4, 8];
+let set_arr_3 = [4, 8];
+set_obj_4.add(set_arr_2);
+set_obj_4.add(set_arr_2);
+set_obj_4.add(set_arr_3);
+set_obj_4.add(set_arr_3);
+console.log("Removed the repeated value using Set object :", set_obj_4);
+
+// We can find the size of the Set object
+console.log(
+  "Give the count of the elements in Set object using size method :",
+  set_obj_4.size
+);
+
+// Check the given value placed or not in Set object
+let set_obj_5 = new Set();
+set_obj_5.add([3, 8]);
+set_obj_5.add([7, 2]);
+// set_obj_5.add(6);
+
+console.log("Return the boolean value for check the given element in Set object using has method :", set_obj_5.has(6));
+
+// This is for array element
+for (let set_obj_5_ele_1 of set_obj_5) {
+  if (set_obj_5_ele_1.includes(3)) {
+    console.log(
+      "Return the boolean value for check the given element in Set object using size method :", set_obj_5_ele_1.includes(3)
+    );
+  }
+}
 // --------------------------------------------------------
