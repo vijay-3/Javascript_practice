@@ -1801,14 +1801,105 @@ set_obj_5.add([3, 8]);
 set_obj_5.add([7, 2]);
 // set_obj_5.add(6);
 
-console.log("Return the boolean value for check the given element in Set object using has method :", set_obj_5.has(6));
+console.log(
+  "Return the boolean value for check the given element in Set object using has method :",
+  set_obj_5.has(6)
+);
 
 // This is for array element
 for (let set_obj_5_ele_1 of set_obj_5) {
   if (set_obj_5_ele_1.includes(3)) {
     console.log(
-      "Return the boolean value for check the given element in Set object using size method :", set_obj_5_ele_1.includes(3)
+      "Return the boolean value for check the given element in Set object using size method :",
+      set_obj_5_ele_1.includes(3)
     );
   }
 }
+// --------------------------------------------------------
+
+// Map Object
+// This is create the map object that contains the key, value pair and also only contain the unique key but value can duplicate for unique key
+let map_obj_1 = new Map();
+
+map_obj_1.set("key-1", 23);
+map_obj_1.set("key-2", 94);
+map_obj_1.set("key-3", 27);
+console.log("Added the key, value to map_obj_1 :", map_obj_1);
+
+// If we give the already existing key with other value then the existing key will be overwritten by new value not create the new key, value pair
+map_obj_1.set("key-3", 194);
+console.log(
+  "Here, we added the new value with existing key name to map_obj_1 :",
+  map_obj_1
+);
+
+// We can also give the array to create the map object but 2-dimensional array because of the map object take the key, value pair
+let map_obj_arr_1 = [
+  ["ele-1", 38],
+  ["ele-2", 457],
+  ["ele-3", 91],
+];
+let map_obj_2 = new Map(map_obj_arr_1);
+console.log(
+  "Here, we created the map_obj_2 using 2-dimentional array :",
+  map_obj_2
+);
+
+// We can also give the object as key and also value. We can also add the key as object direct method but later we can't access. So, we assign the object to variable and then assign to the map object
+let map_obj_3 = new Map();
+let map_obj_obj_1 = { usr_1: "kowsik" };
+let map_obj_obj_2 = { usr_1: "ken" };
+let map_obj_obj_3 = { usr_1: "Danny" };
+
+map_obj_3.set(map_obj_obj_1, 83);
+map_obj_3.set(map_obj_obj_2, 74);
+map_obj_3.set(map_obj_obj_3, 0);
+console.log("Here, we created the map_obj_3's key is object :", map_obj_3);
+
+// We can get the value using for..of loop
+for (let map_obj_3_ele_1 of map_obj_3) {
+  console.log("map_obj_3's key value pair :", map_obj_3_ele_1);
+}
+
+// We can get the key and value separately. Normally for..of loop will give the key and value separately because of that map_obj_3 contains the key value pair
+for (let [map_obj_3_key_1, map_obj_3_val_1] of map_obj_3) {
+  console.log(
+    "map_obj_3's key",
+    map_obj_3_key_1,
+    "map_obj_3's value",
+    map_obj_3_val_1
+  );
+}
+
+// We can also get the all keys and all values separately
+for (let map_obj_3_key_2 of map_obj_3.keys()) {
+  console.log("map_obj_3's key :", map_obj_3_key_2);
+}
+
+for (let map_obj_3_val_2 of map_obj_3.values()) {
+  console.log("map_obj_3's value :", map_obj_3_val_2);
+}
+
+// We can also check the key value pair available or not
+console.log(
+  "Use the 'has' property of map object and it will return the true or false :",
+  map_obj_3.has(map_obj_obj_1)
+);
+
+// We can get the size of the map object
+console.log(
+  "Use the 'size' property of map object and it will return the size :",
+  map_obj_3.size
+);
+
+// We can also use forEach method to get the value and key
+map_obj_3.forEach((map_obj_3_val_3, map_obj_3_key_3) => {
+  console.log("This is value", map_obj_3_val_3, "of the key", map_obj_3_key_3);
+});
+
+// If we use the spead operator(...) and then get the key and value pair it will return like 2-dimensional array format
+console.log(
+  "Here we use the spread operator(...) to get the key and value from map_obj_3 and then it will return in 2-dimentional array format :",
+  ...map_obj_3
+);
 // --------------------------------------------------------
